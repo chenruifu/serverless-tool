@@ -1,0 +1,25 @@
+{
+  "name": "serverless-tool",
+  "version": "1.0.0",
+  "description": "serverless前端工具集",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chenruifu/serverless-tool.git"
+  },
+  "author": "chenrf",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/chenruifu/serverless-tool/issues"
+  },
+  "homepage": "https://github.com/chenruifu/serverless-tool#readme",
+  "dependencies": {
+    "nuxt": "^2.14.6"
+  }
+}

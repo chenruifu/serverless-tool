@@ -1,0 +1,8 @@
+[
+  {
+    "name": "index",
+    "path": "/",
+    "component": "/Users/chenrf/crf/serverless-tool/pages/index.vue",
+    "chunkName": "pages/index"
+  }
+]
