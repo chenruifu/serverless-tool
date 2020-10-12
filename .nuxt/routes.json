@@ -3,6 +3,7 @@
     "name": "index",
     "path": "/",
     "component": "/Users/chenrf/crf/serverless-tool/pages/index.vue",
-    "chunkName": "pages/index"
+    "chunkName": "pages/index",
+    "_name": "_e8e0b918"
   }
 ]
