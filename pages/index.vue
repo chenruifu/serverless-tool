@@ -25,7 +25,7 @@
                 <div class="report-itembox" v-for="(item, k) in mergeData" :key="k">
                     <span class="report-itembox__name">{{item.name}}</span>
                     <div class="report-itembox__progress">
-                        <span :style="{width: item.complete+'%'}">{{item.complete}}%</span>
+                        <span :class="item.class" :style="{width: item.complete+'%'}">{{item.complete}}%</span>
                     </div>
                     <span class="report-itembox__target">{{item.target}}万</span>
                 </div>
@@ -54,17 +54,22 @@ export default {
         mergeData() {
             let mData = this.data;
             for(let i = 0,max= mData.length; i<max; i++) {
-                mData[i].complete = (mData[i].fulfill / mData[i].target * 100).toFixed(2);
+                let thisComplete = (mData[i].fulfill / mData[i].target * 100).toFixed(2);
+                let className = 'red';
+                let classCount = thisComplete / this.timeProgress;
+                if(classCount >= 0.95) {
+                    className = 'green';
+                }else if(classCount >= 0.8) {
+                    className = 'yellow';
+                }
+                mData[i].complete = thisComplete;
+                mData[i].class = className;
             }
             return mData;
         }
     },
-    created() {
-        let d = new Date();
-        let days = new Date(d.getFullYear(), d.getMonth() + 1, 0);
-    },
 	data() {
-        let thisDay = new Date().getDate();
+        let thisDay = new Date().getDate() - 1;
         let days = new Date(new Date().getFullYear(), new Date().getMonth() + 1, 0).getDate();
 		return {
             timeProgress: parseInt(thisDay/days*100),
@@ -218,6 +223,15 @@ export default {
             padding-right: 14px;
             font-size: 14px;
             max-width: 100%;
+            &.yellow{
+                background: linear-gradient(to right, #FFE985, #FA742B)
+            }
+            &.green{
+                background: linear-gradient(to right, #81FBB8, #28C76F)
+            }
+            &.red{
+                background: linear-gradient(to right, #FEB692, #EA5455)
+            }
         }
     }
 }
