@@ -1,7 +1,7 @@
 <template>
     <div>
         <div class="report-progress">
-            <div class="report-progress__title">2020年10月各业务部目标进度跟踪(单位：万元)</div>
+            <div class="report-progress__title">2020年10月各业务部目标进度跟踪</div>
             <div class="report-progress__tag">
                 <span class="target">月目标</span>
                 <span class="complete">目标完成率</span>
@@ -75,28 +75,28 @@ export default {
             timeProgress: parseInt(thisDay/days*100),
             data: [{
                 name: '销售部',
-                target: 120,
-                fulfill: 89,
+                target: 132,
+                fulfill: 27.38,
             }, {
                 name: '网站部',
-                target: 80,
-                fulfill: 10,
+                target: 90,
+                fulfill: 36.28,
             }, {
                 name: '商务',
-                target: 100,
-                fulfill: 13.18,
+                target: 20,
+                fulfill: 6.65,
             }, {
                 name: '自媒体',
-                target: 40,
-                fulfill: 8,
+                target: 9,
+                fulfill: 3.6,
             }, {
                 name: '国艺部-线上+线下',
-                target: 60,
-                fulfill: 30,
+                target: 9.8,
+                fulfill: 3.71,
             }, {
                 name: '国艺部-商城',
-                target: 60,
-                fulfill: 20,
+                target: 5,
+                fulfill: 0.78,
             }]
 		};
 	},
@@ -209,7 +209,7 @@ export default {
         position: relative;
         height: 28px;
         border-radius: 14px;
-        background-color: #D5E3FF;
+        background-color: #e0e8f9;
         span{
             position: absolute;
             left:0;
@@ -224,7 +224,7 @@ export default {
             font-size: 14px;
             max-width: 100%;
             &.yellow{
-                background: linear-gradient(to right, #FFE985, #FA742B)
+                background: linear-gradient(to right, #FFE985, #e8cf19)
             }
             &.green{
                 background: linear-gradient(to right, #81FBB8, #28C76F)
