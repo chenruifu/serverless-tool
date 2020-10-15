@@ -43,7 +43,7 @@ module.exports =
 /******/
 /******/ 		// "0" is the signal for "already loaded"
 /******/ 		if(installedChunks[chunkId] !== 0) {
-/******/ 			var chunk = require("./" + ({"1":"pages/index"}[chunkId]||chunkId) + ".js");
+/******/ 			var chunk = require("./" + ({"1":"pages/index","2":"pages/pahe"}[chunkId]||chunkId) + ".js");
 /******/ 			var moreModules = chunk.modules, chunkIds = chunk.ids;
 /******/ 			for(var moduleId in moreModules) {
 /******/ 				modules[moduleId] = moreModules[moduleId];
@@ -740,7 +740,7 @@ async function setContext(app, context) {
   // If context not defined, create it
   if (!app.context) {
     app.context = {
-      isStatic: false,
+      isStatic: true,
       isDev: false,
       isHMR: false,
       app,
@@ -750,13 +750,9 @@ async function setContext(app, context) {
       env: {}
     }; // Only set once
 
-    if ( true && context.req) {
-      app.context.req = context.req;
-    }
+    if (false) {}
 
-    if ( true && context.res) {
-      app.context.res = context.res;
-    }
+    if (false) {}
 
     if (context.ssrContext) {
       app.context.ssrContext = context.ssrContext;
@@ -1370,6 +1366,8 @@ if (false) {}
 
 
 
+const _11a243fc = () => interopDefault(__webpack_require__.e(/* import() | pages/pahe */ 2).then(__webpack_require__.bind(null, 96)));
+
 const _e8e0b918 = () => interopDefault(__webpack_require__.e(/* import() | pages/index */ 1).then(__webpack_require__.bind(null, 95))); // TODO: remove in Nuxt 3
 
 
@@ -1389,6 +1387,10 @@ const routerOptions = {
   linkExactActiveClass: 'nuxt-link-exact-active',
   scrollBehavior: router_scrollBehavior,
   routes: [{
+    path: "/pahe",
+    component: _11a243fc,
+    name: "pahe"
+  }, {
     path: "/",
     component: _e8e0b918,
     name: "index"
@@ -2010,6 +2012,10 @@ const layouts = {
 
     isFetching() {
       return this.nbFetching > 0;
+    },
+
+    isPreview() {
+      return Boolean(this.$options.previewData);
     }
 
   },
@@ -2419,7 +2425,9 @@ const createNext = ssrContext => opts => {
     routePath: ''
   }; // Remove query from url is static target
 
-  if (false) {} // Public runtime config
+  if ( true && ssrContext.url) {
+    ssrContext.url = ssrContext.url.split('?')[0];
+  } // Public runtime config
 
 
   ssrContext.nuxt.config = ssrContext.runtimeConfig.public; // Create the app definition and the instance (created for each request)

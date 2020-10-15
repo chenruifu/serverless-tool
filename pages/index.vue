@@ -110,18 +110,18 @@ export default {
     &__title{
         text-align: center;
         font-size: 28px;
-        color: #1890ff
+        color: #096dd9
     }
     &__tag{
         margin-top: 10px;
         text-align: center;
         span{
-            font-size: 12px;
+            font-size: 15px;
             display: inline-block;
             padding-left: 14px;
             position: relative;
             margin:0 20px;
-            color: #339bfb;
+            color: #096dd9;
             &::after{
                 content: '';
                 position: absolute;
@@ -146,7 +146,7 @@ export default {
                 left: 5px;
                 top: 50%;
                 transform: translateY(-50%);
-                border-left: 1px dashed #339bfb
+                border-left: 1px dashed #096dd9
             }
             
         }
@@ -171,13 +171,13 @@ export default {
     position: absolute;
     left: 130px;
     top: 0;
-    color: #339bfb;
+    color: #096dd9;
     width: calc(100% - 260px);
     span{
         position: absolute;
         width: 60px;
         top: 0;
-        font-size: 13px;
+        font-size: 15px;
         margin-left: -30px;
         text-align: center;
         .for-loop(11);
@@ -194,8 +194,8 @@ export default {
         transform: translateY(-50%);
         text-align: right;
         width: 130px;
-        font-size: 14px;
-        color: #339bfb;
+        font-size: 16px;
+        color: #096dd9;
     }
     &__target{
         position: absolute;
@@ -247,7 +247,7 @@ export default {
         position: absolute;
         width: 0;
         left: 10%;
-        border: 1px dashed #339bfb;
+        border: 1px dashed #096dd9;
         height: 100%;
     }
 }

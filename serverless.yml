@@ -1,4 +1,5 @@
 component: nuxtjs # (必填) 组件名称，此处为 nuxtjs
+
 name: serverless-tool # (必填) 实例名称
 org:  chenrf # (可选) 用于记录组织信息，默认值为您的腾讯云账户 APPID
 app: serverless-tool # (可选) 该 nuxt.js 项目名称

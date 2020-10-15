@@ -1,9 +1,14 @@
 [
   {
+    "name": "pahe",
+    "path": "/pahe",
+    "component": "/Users/chenrf/crf/serverless-tool/pages/pahe.vue",
+    "chunkName": "pages/pahe"
+  },
+  {
     "name": "index",
     "path": "/",
     "component": "/Users/chenrf/crf/serverless-tool/pages/index.vue",
-    "chunkName": "pages/index",
-    "_name": "_e8e0b918"
+    "chunkName": "pages/index"
   }
 ]
