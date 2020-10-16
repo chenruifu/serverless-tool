@@ -16,7 +16,7 @@ inputs:
         exclude: # 不包含的文件或路径
             - .env
             - '.git/**'
-            # - 'node_modules/**'
+            - 'node_modules/**'
     # 层设置
     layers:
         - name: ${output:${stage}:${app}:tool-layer.name}

@@ -7,7 +7,9 @@ stage: dev # (可选) 用于区分环境信息，默认值是 dev
 inputs:
   region: ap-guangzhou
   name: ${name}
-  src: ../node_modules
+  src: 
+    src: ../node_modules
+    targetDir: /node_modules
   runtimes:
     - Nodejs10.15
     - Nodejs12.16
