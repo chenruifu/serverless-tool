@@ -1,24 +1,53 @@
 component: nuxtjs # (必填) 组件名称，此处为 nuxtjs
-
-name: serverless-tool # (必填) 实例名称
-org:  chenrf # (可选) 用于记录组织信息，默认值为您的腾讯云账户 APPID
-app: serverless-tool # (可选) 该 nuxt.js 项目名称
+name: tool-chenrf-com # (必填) 实例名称
+org: chenrf # (可选) 用于记录组织信息，默认值为您的腾讯云账户 APPID
+app: tool # (可选) 该 nuxt.js 项目名称
 stage: dev # (可选) 用于区分环境信息，默认值是 dev
 
 inputs:
-  src:
-    src: ./
-    exclude:
-      - .env
-      # - "node_modules/**"
-  region: ap-guangzhou
-  runtime: Nodejs12.16
-  # layers:
-  #   - name: ${output:${stage}:${app}:${name}-layer.name}
-  #     version: ${output:${stage}:${app}:${name}-layer.version}
-  apigatewayConf:
-    enableCORS: true
-    protocols:
-      - http
-      - https
-    environment: release
+    region: ap-guangzhou
+    functionName: tool-chenrf-com #函数名称
+    serviceName: tool_chenrf_com #API 网关服务名称, 默认创建一个新的服务名称
+    serviceId: service-5q30wfbe # api网关服务ID
+    runtime: Nodejs12.16
+    # 执行目录
+    src:
+        src: ./ # 代码路径
+        exclude: # 不包含的文件或路径
+            - .env
+            - '.git/**'
+            # - 'node_modules/**'
+    # 层设置
+    layers:
+        - name: ${output:${stage}:${app}:tool-layer.name}
+          version: ${output:${stage}:${app}:tool-layer.version}
+    # API 网关
+    apigatewayConf:
+        enableCORS: true #开启跨域
+        protocols:
+            - http
+            - https
+        environment: release
+    # 静态资源配置
+    staticConf:
+        cosConf:
+            bucket: tool-chenrf-com #COS 存储同名称，没有将自动创建
+            acl:
+                permissions: public-read #公共权限配置
+            sources: #需要托管到 COS 的静态资源目录
+                - src: .nuxt/dist/client
+                  targetDir: /
+                - src: static
+                  targetDir: /
+        cdnConf:
+            area: mainland #加速区域，mainland: 大陆，overseas：海外，global：全球加速
+            domain: static.chenrf.com #CDN 域名
+            autoRefresh: true #是否自动刷新 CDN
+            refreshType: flush #CDN 刷新类型，delete：刷新全部资源，flush：刷新变更资源
+            forceRedirect: #访问协议强制跳转配置
+                switch: on #访问强制跳转配置开关, on：开启，off：关闭
+                redirectType: https #访问强制跳转类型，http：强制 http 跳转，https：强制 https 跳转
+                redirectStatusCode: 301 #强制跳转时返回状态码，支持 301、302
+            https:
+                http2: on #是否开启 HTTP2，on： 开启，off： 关闭
+                certId: "hES1MnO2" #腾讯云托管域名证书 ID

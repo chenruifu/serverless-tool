@@ -1,0 +1,13 @@
+component: layer
+name: tool-layer # (必填) 实例名称
+org: chenrf # (可选) 用于记录组织信息，默认值为您的腾讯云账户 APPID
+app: tool # (可选) 该 nuxt.js 项目名称
+stage: dev # (可选) 用于区分环境信息，默认值是 dev
+
+inputs:
+  region: ap-guangzhou
+  name: ${name}
+  src: ../node_modules
+  runtimes:
+    - Nodejs10.15
+    - Nodejs12.16

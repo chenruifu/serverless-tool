@@ -1,5 +1,7 @@
 module.exports = {
     build: {
+        publicPath: 'https://static.chenrf.com',
+        extractCSS: true,
         loaders: {
             less: {
                 lessOptions: {

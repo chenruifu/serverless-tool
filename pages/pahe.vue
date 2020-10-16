@@ -9,5 +9,5 @@ export default {
 </script>
 
 <style>
-
+.abc{width: 220px;}
 </style>
