@@ -35,8 +35,8 @@
             <a-row :gutter="12">
                 <a-col :span="8" v-for="(item, k) in data" :key="k">
                     <span>{{item.name}}</span>
-                    <a-input size="large" v-model="item.target" placeholder="目标值" />
-                    <a-input size="large" v-model="item.fulfill" placeholder="当前完成值" />
+                    <a-input size="large" v-model="item.target" placeholder="目标值1" />
+                    <a-input size="large" v-model="item.fulfill" placeholder="当前完成值23" />
                 </a-col>
             </a-row>
         </div>

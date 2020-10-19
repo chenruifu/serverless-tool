@@ -968,6 +968,11 @@ function stripTrailingSlash(path) {
 function isSamePath(p1, p2) {
   return stripTrailingSlash(p1) === stripTrailingSlash(p2);
 }
+function setScrollRestoration(newVal) {
+  try {
+    window.history.scrollRestoration = newVal;
+  } catch (e) {}
+}
 // CONCATENATED MODULE: ./.nuxt/mixins/fetch.server.js
 
 
@@ -1727,7 +1732,7 @@ const layouts = {
 
   created() {
     // Add this.$nuxt in child instances
-    external_vue_default.a.prototype.$nuxt = this;
+    this.$root.$options.$nuxt = this;
 
     if (false) {} // Add $nuxt.error()
 
@@ -1881,6 +1886,13 @@ external_vue_default.a.component('NChild', nuxt_child); // Component NuxtLink is
 // Component: <Nuxt>
 
 external_vue_default.a.component(components_nuxt.name, components_nuxt);
+Object.defineProperty(external_vue_default.a.prototype, '$nuxt', {
+  get() {
+    return this.$root.$options.$nuxt;
+  },
+
+  configurable: true
+});
 external_vue_default.a.use(external_vue_meta_default.a, {
   "keyName": "head",
   "attribute": "data-n-head",
