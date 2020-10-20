@@ -21,6 +21,16 @@ inputs:
     layers:
         - name: ${output:${stage}:${app}:tool-layer.name}
           version: ${output:${stage}:${app}:tool-layer.version}
+    functionConf: # 函数配置相关
+        timeout: 6 # 超时时间，单位秒
+        eip: false # 是否固定出口IP
+        memorySize: 512 # 内存大小，单位MB
+        environment: #  环境变量
+            variables: #  环境变量数组
+                TEST: vale
+        vpcConfig: # 私有网络配置
+            vpcId: '' # 私有网络的Id
+            subnetId: '' # 子网ID
     # API 网关
     apigatewayConf:
         enableCORS: true #开启跨域
