@@ -43,7 +43,7 @@ module.exports =
 /******/
 /******/ 		// "0" is the signal for "already loaded"
 /******/ 		if(installedChunks[chunkId] !== 0) {
-/******/ 			var chunk = require("./" + ({"1":"pages/index","2":"pages/pahe"}[chunkId]||chunkId) + ".js");
+/******/ 			var chunk = require("./" + ({"1":"pages/demo","2":"pages/demo1","3":"pages/index"}[chunkId]||chunkId) + ".js");
 /******/ 			var moreModules = chunk.modules, chunkIds = chunk.ids;
 /******/ 			for(var moduleId in moreModules) {
 /******/ 				modules[moduleId] = moreModules[moduleId];
@@ -1110,9 +1110,11 @@ if (false) {}
 
 
 
-const _11a243fc = () => interopDefault(__webpack_require__.e(/* import() | pages/pahe */ 2).then(__webpack_require__.bind(null, 89)));
+const _0fc23cb1 = () => interopDefault(__webpack_require__.e(/* import() | pages/demo */ 1).then(__webpack_require__.bind(null, 91)));
 
-const _e8e0b918 = () => interopDefault(__webpack_require__.e(/* import() | pages/index */ 1).then(__webpack_require__.bind(null, 88))); // TODO: remove in Nuxt 3
+const _2ee22960 = () => interopDefault(__webpack_require__.e(/* import() | pages/demo1 */ 2).then(__webpack_require__.bind(null, 92)));
+
+const _e8e0b918 = () => interopDefault(__webpack_require__.e(/* import() | pages/index */ 3).then(__webpack_require__.bind(null, 90))); // TODO: remove in Nuxt 3
 
 
 const emptyFn = () => {};
@@ -1131,9 +1133,13 @@ const routerOptions = {
   linkExactActiveClass: 'nuxt-link-exact-active',
   scrollBehavior: router_scrollBehavior,
   routes: [{
-    path: "/pahe",
-    component: _11a243fc,
-    name: "pahe"
+    path: "/demo",
+    component: _0fc23cb1,
+    name: "demo"
+  }, {
+    path: "/demo1",
+    component: _2ee22960,
+    name: "demo1"
   }, {
     path: "/",
     component: _e8e0b918,

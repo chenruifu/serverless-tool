@@ -1,10 +1,17 @@
 [
   {
-    "name": "pahe",
-    "path": "/pahe",
-    "component": "/Users/chenrf/crf/serverless-tool/pages/pahe.vue",
-    "chunkName": "pages/pahe",
-    "_name": "_11a243fc"
+    "name": "demo",
+    "path": "/demo",
+    "component": "/Users/chenrf/crf/serverless-tool/pages/demo.vue",
+    "chunkName": "pages/demo",
+    "_name": "_0fc23cb1"
+  },
+  {
+    "name": "demo1",
+    "path": "/demo1",
+    "component": "/Users/chenrf/crf/serverless-tool/pages/demo1.vue",
+    "chunkName": "pages/demo1",
+    "_name": "_2ee22960"
   },
   {
     "name": "index",
