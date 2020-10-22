@@ -25,7 +25,7 @@
                 <div class="report-itembox" v-for="(item, k) in mergeData" :key="k">
                     <span class="report-itembox__name">{{item.name}}</span>
                     <div class="report-itembox__progress">
-                        <span :class="item.class" :style="{width: item.complete+'%'}">{{item.complete}}%</span>
+                        <span :class="item.class" :style="{width: item.complete+'%'}">{{item.fulfill.toFixed(1)}}W&nbsp;/&nbsp;{{item.complete}}%</span>
                     </div>
                     <span class="report-itembox__target">{{item.target}}万</span>
                 </div>
@@ -54,7 +54,7 @@ export default {
         mergeData() {
             let mData = this.data;
             for(let i = 0,max= mData.length; i<max; i++) {
-                let thisComplete = (mData[i].fulfill / mData[i].target * 100).toFixed(2);
+                let thisComplete = (mData[i].fulfill / mData[i].target * 100).toFixed(1);
                 let className = 'red';
                 let classCount = thisComplete / this.timeProgress;
                 if(classCount >= 0.95) {
@@ -221,7 +221,7 @@ export default {
             height: 100%;
             border-radius: 14px;
             padding-right: 14px;
-            font-size: 14px;
+            font-size: 12px;
             max-width: 100%;
             &.yellow{
                 background: linear-gradient(to right, #FFE985, #e8cf19)

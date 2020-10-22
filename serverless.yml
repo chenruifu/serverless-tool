@@ -24,7 +24,7 @@ inputs:
     functionConf: # 函数配置相关
         timeout: 6 # 超时时间，单位秒
         eip: false # 是否固定出口IP
-        memorySize: 512 # 内存大小，单位MB
+        memorySize: 384 # 内存大小，单位MB
         environment: #  环境变量
             variables: #  环境变量数组
                 TEST: vale
