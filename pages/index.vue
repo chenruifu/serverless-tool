@@ -29,6 +29,11 @@
                     </div>
                     <span class="report-itembox__target">{{item.target}}万</span>
                 </div>
+                <div class="report-total">
+                    <div class="report-total__item report-total__item--blue"><p>总目标</p><b>{{totalData.total}}W</b></div>
+                    <div class="report-total__item" :class="totalData.class"><p>目标完成</p><b>{{totalData.fulfill}}W</b></div>
+                    <div class="report-total__item report-total__item--blue2"><p>完成进度</p><b>{{totalData.complete}}%</b></div>
+                </div>
             </div>
         </div>
         <div class="report-input">
@@ -66,6 +71,30 @@ export default {
                 mData[i].class = className;
             }
             return mData;
+        },
+        totalData() {
+            const mData = this.data;
+            let returnData = {
+                total: 0,
+                fulfill: 0
+            };
+            for(let i = 0,max= mData.length; i<max; i++) {
+                returnData.total += parseFloat(mData[i].target);
+                returnData.fulfill += parseFloat(mData[i].fulfill);
+            }
+            let thisComplete = (returnData.fulfill / returnData.total * 100).toFixed(2);
+            let className = 'red';
+            let classCount = thisComplete / this.timeProgress;
+            if(classCount >= 0.95) {
+                className = 'green';
+            }else if(classCount >= 0.8) {
+                className = 'yellow';
+            }
+            returnData.complete = thisComplete;
+            returnData.class = className;
+            returnData.total = returnData.total.toFixed(2);
+            returnData.fulfill = returnData.fulfill.toFixed(2);
+            return returnData;
         }
     },
 	data() {
@@ -106,7 +135,7 @@ export default {
 
 .report-progress{
     margin: 80px auto;
-    width: 860px;
+    width: 880px;
     &__title{
         text-align: center;
         font-size: 28px;
@@ -152,15 +181,15 @@ export default {
         }
     }
     &__data{
-        margin-top: 30px;
-        padding: 30px 130px 0;
+        margin: 30px 0 0 200px;
+        padding: 30px 60px 0 140px;
         position: relative;
         &:after{
             content: '';
             position: absolute;
-            left: 129px;
+            left: 139px;
             top: 30px;
-            height: 100%;
+            height: calc(100% - 30px);
             width: 1px;
             background-color: #f0f0f0;
         }
@@ -169,10 +198,10 @@ export default {
 // 进度线
 .report-percentage{
     position: absolute;
-    left: 130px;
+    left: 140px;
     top: 0;
     color: #096dd9;
-    width: calc(100% - 260px);
+    width: calc(100% - 200px);
     span{
         position: absolute;
         width: 60px;
@@ -182,6 +211,47 @@ export default {
         text-align: center;
         .for-loop(11);
     }
+}
+// 左侧汇总数据
+.report-total{
+    position: absolute;
+    left: -200px;
+    top: 0;
+    width: 160px;
+    padding: 10px 0;
+    box-sizing: border-box;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    &__item{
+        position: relative;
+        padding: 10px;
+        text-align: center;
+        background-color: #28C76F;
+        color: #fff;
+        &--blue{
+            background: linear-gradient(45deg, #5EFCE8, #736EFE)
+        }
+        &--blue2{
+            background: linear-gradient(45deg, #736EFE, #5EFCE8)
+        }
+        &.yellow{
+            background: linear-gradient(45deg, #FFE985, #e8cf19)
+        }
+        &.green{
+            background: linear-gradient(45deg, #81FBB8, #28C76F)
+        }
+        &.red{
+            background: linear-gradient(45deg, #FEB692, #EA5455)
+        }
+        p{margin-bottom: 0;}
+        b{
+            font-weight: normal;
+            font-size: 1.6em;
+        }
+    }
+
 }
 // 数据
 .report-itembox{
@@ -238,8 +308,8 @@ export default {
 // 时间进度条
 .report-timeline{
     position: absolute;
-    left: 130px;
-    right: 130px;
+    left: 140px;
+    right: 60px;
     top: 30px;
     bottom: 0;
     z-index: 2;
