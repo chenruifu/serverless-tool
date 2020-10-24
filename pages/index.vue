@@ -31,8 +31,8 @@
                 </div>
                 <div class="report-total">
                     <div class="report-total__item report-total__item--blue"><p>总目标</p><b>{{totalData.total}}W</b></div>
-                    <div class="report-total__item" :class="totalData.class"><p>目标完成</p><b>{{totalData.fulfill}}W</b></div>
-                    <div class="report-total__item report-total__item--blue2"><p>完成进度</p><b>{{totalData.complete}}%</b></div>
+                    <div class="report-total__item report-total__item--blue"><p>目标完成</p><b>{{parseFloat(totalData.fulfill).toFixed(1)}}W&nbsp;/&nbsp;{{parseFloat(totalData.complete).toFixed(1)}}%</b></div>
+                    <div class="report-total__item" :class="totalData.class"><p>完成进度</p><b>{{totalData.count}}%</b></div>
                 </div>
             </div>
         </div>
@@ -94,6 +94,7 @@ export default {
             returnData.class = className;
             returnData.total = returnData.total.toFixed(2);
             returnData.fulfill = returnData.fulfill.toFixed(2);
+            returnData.count = (classCount * 100).toFixed(2);
             return returnData;
         }
     },
@@ -217,7 +218,7 @@ export default {
     position: absolute;
     left: -200px;
     top: 0;
-    width: 160px;
+    width: 180px;
     padding: 10px 0;
     box-sizing: border-box;
     height: 100%;
@@ -230,11 +231,9 @@ export default {
         text-align: center;
         background-color: #28C76F;
         color: #fff;
+        font-size: 14px;
         &--blue{
             background: linear-gradient(45deg, #5EFCE8, #736EFE)
-        }
-        &--blue2{
-            background: linear-gradient(45deg, #736EFE, #5EFCE8)
         }
         &.yellow{
             background: linear-gradient(45deg, #FFE985, #e8cf19)
@@ -245,7 +244,7 @@ export default {
         &.red{
             background: linear-gradient(45deg, #FEB692, #EA5455)
         }
-        p{margin-bottom: 0;}
+        p{margin-bottom: 0;font-size: 1.2em;}
         b{
             font-weight: normal;
             font-size: 1.6em;
