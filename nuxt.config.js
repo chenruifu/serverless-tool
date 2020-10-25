@@ -11,7 +11,7 @@ module.exports = {
         //         });
         //     }
         // },
-        extractCSS: true,
+        extractCSS: false,
         loaders: {
             less: {
                 lessOptions: {
