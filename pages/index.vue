@@ -1,7 +1,7 @@
 <template>
     <div>
         <div class="report-progress">
-            <div class="report-progress__title">2020年10月各业务部目标进度跟踪</div>
+            <div class="report-progress__title">{{timeYear}}年{{timeMonth}}月各业务部目标进度跟踪</div>
             <div class="report-progress__tag">
                 <span class="target">月目标</span>
                 <span class="complete">目标完成率</span>
@@ -38,10 +38,20 @@
         </div>
         <div class="report-input">
             <a-row :gutter="12">
-                <a-col :span="8" v-for="(item, k) in data" :key="k">
+                <a-col :span="5" v-for="(item, k) in data" :key="k">
                     <span>{{item.name}}</span>
-                    <a-input size="large" v-model="item.target" placeholder="目标值1" />
-                    <a-input size="large" v-model="item.fulfill" placeholder="当前完成值23" />
+                    <a-input size="large" v-model="item.target" placeholder="目标值" />
+                    <a-input size="large" v-model="item.fulfill" placeholder="当前完成值" />
+                </a-col>
+                <a-col :span="5">
+                    <span>当前天数/月总天数</span>
+                    <a-input size="large" v-model="timeDay" placeholder="当前天" />
+                    <a-input size="large" v-model="timeDayTotal" placeholder="当月总天数" />
+                </a-col>
+                <a-col :span="5">
+                    <span>年份/月份</span>
+                    <a-input size="large" v-model="timeYear" placeholder="当前年份" />
+                    <a-input size="large" v-model="timeMonth" placeholder="当前月份" />
                 </a-col>
             </a-row>
         </div>
@@ -56,6 +66,7 @@ export default {
         aCol: Col
 	},
     computed: {
+        // 数据计算
         mergeData() {
             let mData = this.data;
             for(let i = 0,max= mData.length; i<max; i++) {
@@ -72,6 +83,7 @@ export default {
             }
             return mData;
         },
+        // 合计数据
         totalData() {
             const mData = this.data;
             let returnData = {
@@ -96,13 +108,20 @@ export default {
             returnData.fulfill = returnData.fulfill.toFixed(2);
             returnData.count = (classCount * 100).toFixed(2);
             return returnData;
+        },
+        // 时间进度
+        timeProgress() {
+            return parseFloat(this.timeDay/this.timeDayTotal*100).toFixed(2)
         }
     },
 	data() {
         let thisDay = new Date().getDate() - 1;
         let days = new Date(new Date().getFullYear(), new Date().getMonth() + 1, 0).getDate();
 		return {
-            timeProgress: parseInt(thisDay/days*100),
+            timeDay: 3,
+            timeDayTotal: 31,
+            timeYear: 2020,
+            timeMonth: 10,
             data: [{
                 name: '销售部',
                 target: 132,
