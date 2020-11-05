@@ -119,7 +119,7 @@ export default {
         let days = new Date(new Date().getFullYear(), new Date().getMonth() + 1, 0).getDate();
 		return {
             timeDay: 3,
-            timeDayTotal: 31,
+            timeDayTotal: 30,
             timeYear: 2020,
             timeMonth: 11,
             data: [{
@@ -128,7 +128,7 @@ export default {
                 fulfill: 27.38,
             }, {
                 name: '网站部',
-                target: 90,
+                target: 95,
                 fulfill: 36.28,
             }, {
                 name: '商务',
