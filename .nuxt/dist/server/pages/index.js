@@ -132,12 +132,12 @@ module.exports = exports;
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
-// CONCATENATED MODULE: ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./pages/index.vue?vue&type=template&id=771f3aca&
-var lib_vue_loader_options_pagesvue_type_template_id_771f3aca_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',[_vm._ssrNode("<div class=\"report-progress\"><div class=\"report-progress__title\">"+_vm._ssrEscape(_vm._s(_vm.timeYear)+"年"+_vm._s(_vm.timeMonth)+"月各业务部目标进度跟踪")+"</div> <div class=\"report-progress__tag\"><span class=\"target\">月目标</span> <span class=\"complete\">目标完成率</span> <span class=\"time\">时间进度</span></div> <div class=\"report-progress__data\"><div class=\"report-percentage\"><span>0%</span> <span>10%</span> <span>20%</span> <span>30%</span> <span>40%</span> <span>50%</span> <span>60%</span> <span>70%</span> <span>80%</span> <span>90%</span> <span>100%</span></div> <div class=\"report-timeline\"><span"+(_vm._ssrStyle(null,{left: _vm.timeProgress+'%'}, null))+"></span></div> "+(_vm._ssrList((_vm.mergeData),function(item,k){return ("<div class=\"report-itembox\"><span class=\"report-itembox__name\">"+_vm._ssrEscape(_vm._s(item.name))+"</span> <div class=\"report-itembox__progress\"><span"+(_vm._ssrClass(null,item.class))+(_vm._ssrStyle(null,{width: item.complete+'%'}, null))+">"+_vm._ssrEscape(_vm._s(parseFloat(item.fulfill).toFixed(1))+"W / "+_vm._s(item.complete)+"%")+"</span></div> <span class=\"report-itembox__target\">"+_vm._ssrEscape(_vm._s(item.target)+"万")+"</span></div>")}))+" <div class=\"report-total\"><div class=\"report-total__item report-total__item--blue\"><p>总目标</p><b>"+_vm._ssrEscape(_vm._s(_vm.totalData.total)+"W")+"</b></div> <div class=\"report-total__item report-total__item--blue\"><p>目标完成</p><b>"+_vm._ssrEscape(_vm._s(parseFloat(_vm.totalData.fulfill).toFixed(1))+"W / "+_vm._s(parseFloat(_vm.totalData.complete).toFixed(1))+"%")+"</b></div> <div"+(_vm._ssrClass("report-total__item",_vm.totalData.class))+"><p>完成进度</p><b>"+_vm._ssrEscape(_vm._s(_vm.totalData.count)+"%")+"</b></div></div></div></div> "),_vm._ssrNode("<div class=\"report-input\">","</div>",[_c('a-row',{attrs:{"gutter":12}},[_vm._l((_vm.data),function(item,k){return _c('a-col',{key:k,attrs:{"span":5}},[_c('span',[_vm._v(_vm._s(item.name))]),_vm._v(" "),_c('a-input',{attrs:{"size":"large","placeholder":"目标值"},model:{value:(item.target),callback:function ($$v) {_vm.$set(item, "target", $$v)},expression:"item.target"}}),_vm._v(" "),_c('a-input',{attrs:{"size":"large","placeholder":"当前完成值"},model:{value:(item.fulfill),callback:function ($$v) {_vm.$set(item, "fulfill", $$v)},expression:"item.fulfill"}})],1)}),_vm._v(" "),_c('a-col',{attrs:{"span":5}},[_c('span',[_vm._v("当前天数/月总天数")]),_vm._v(" "),_c('a-input',{attrs:{"size":"large","placeholder":"当前天"},model:{value:(_vm.timeDay),callback:function ($$v) {_vm.timeDay=$$v},expression:"timeDay"}}),_vm._v(" "),_c('a-input',{attrs:{"size":"large","placeholder":"当月总天数"},model:{value:(_vm.timeDayTotal),callback:function ($$v) {_vm.timeDayTotal=$$v},expression:"timeDayTotal"}})],1),_vm._v(" "),_c('a-col',{attrs:{"span":5}},[_c('span',[_vm._v("年份/月份")]),_vm._v(" "),_c('a-input',{attrs:{"size":"large","placeholder":"当前年份"},model:{value:(_vm.timeYear),callback:function ($$v) {_vm.timeYear=$$v},expression:"timeYear"}}),_vm._v(" "),_c('a-input',{attrs:{"size":"large","placeholder":"当前月份"},model:{value:(_vm.timeMonth),callback:function ($$v) {_vm.timeMonth=$$v},expression:"timeMonth"}})],1)],2)],1)],2)}
+// CONCATENATED MODULE: ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./pages/index.vue?vue&type=template&id=11bf796c&
+var lib_vue_loader_options_pagesvue_type_template_id_11bf796c_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',[_vm._ssrNode("<div class=\"report-progress\"><div class=\"report-progress__title\">"+_vm._ssrEscape(_vm._s(_vm.timeYear)+"年"+_vm._s(_vm.timeMonth)+"月各业务部目标进度跟踪")+"</div> <div class=\"report-progress__tag\"><span class=\"target\">月目标</span> <span class=\"complete\">目标完成率</span> <span class=\"time\">时间进度</span></div> <div class=\"report-progress__data\"><div class=\"report-percentage\"><span>0%</span> <span>10%</span> <span>20%</span> <span>30%</span> <span>40%</span> <span>50%</span> <span>60%</span> <span>70%</span> <span>80%</span> <span>90%</span> <span>100%</span></div> <div class=\"report-timeline\"><span"+(_vm._ssrStyle(null,{left: _vm.timeProgress+'%'}, null))+"></span></div> "+(_vm._ssrList((_vm.mergeData),function(item,k){return ("<div class=\"report-itembox\"><span class=\"report-itembox__name\">"+_vm._ssrEscape(_vm._s(item.name))+"</span> <div class=\"report-itembox__progress\"><span"+(_vm._ssrClass(null,item.class))+(_vm._ssrStyle(null,{width: item.complete+'%'}, null))+">"+_vm._ssrEscape(_vm._s(parseFloat(item.fulfill).toFixed(1))+"W / "+_vm._s(item.complete)+"%")+"</span></div> <span class=\"report-itembox__target\">"+_vm._ssrEscape(_vm._s(item.target)+"万")+"</span></div>")}))+" <div class=\"report-total\"><div class=\"report-total__item report-total__item--blue\"><p>总目标</p><b>"+_vm._ssrEscape(_vm._s(_vm.totalData.total)+"W")+"</b></div> <div class=\"report-total__item report-total__item--blue\"><p>目标完成</p><b>"+_vm._ssrEscape(_vm._s(parseFloat(_vm.totalData.fulfill).toFixed(1))+"W / "+_vm._s(parseFloat(_vm.totalData.complete).toFixed(1))+"%")+"</b></div> <div"+(_vm._ssrClass("report-total__item",_vm.totalData.class))+"><p>完成进度</p><b>"+_vm._ssrEscape(_vm._s(_vm.totalData.count)+"%")+"</b></div></div></div></div> "),_vm._ssrNode("<div class=\"report-input\">","</div>",[_c('a-row',{attrs:{"gutter":12}},[_vm._l((_vm.data),function(item,k){return _c('a-col',{key:k,attrs:{"span":5}},[_c('span',[_vm._v(_vm._s(item.name))]),_vm._v(" "),_c('a-input',{attrs:{"size":"large","placeholder":"目标值"},model:{value:(item.target),callback:function ($$v) {_vm.$set(item, "target", $$v)},expression:"item.target"}}),_vm._v(" "),_c('a-input',{attrs:{"size":"large","placeholder":"当前完成值"},model:{value:(item.fulfill),callback:function ($$v) {_vm.$set(item, "fulfill", $$v)},expression:"item.fulfill"}})],1)}),_vm._v(" "),_c('a-col',{attrs:{"span":5}},[_c('span',[_vm._v("当前天数/月总天数")]),_vm._v(" "),_c('a-input',{attrs:{"size":"large","placeholder":"当前天"},model:{value:(_vm.timeDay),callback:function ($$v) {_vm.timeDay=$$v},expression:"timeDay"}}),_vm._v(" "),_c('a-input',{attrs:{"size":"large","placeholder":"当月总天数"},model:{value:(_vm.timeDayTotal),callback:function ($$v) {_vm.timeDayTotal=$$v},expression:"timeDayTotal"}})],1),_vm._v(" "),_c('a-col',{attrs:{"span":5}},[_c('span',[_vm._v("年份/月份")]),_vm._v(" "),_c('a-input',{attrs:{"size":"large","placeholder":"当前年份"},model:{value:(_vm.timeYear),callback:function ($$v) {_vm.timeYear=$$v},expression:"timeYear"}}),_vm._v(" "),_c('a-input',{attrs:{"size":"large","placeholder":"当前月份"},model:{value:(_vm.timeMonth),callback:function ($$v) {_vm.timeMonth=$$v},expression:"timeMonth"}})],1)],2)],1)],2)}
 var staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./pages/index.vue?vue&type=template&id=771f3aca&
+// CONCATENATED MODULE: ./pages/index.vue?vue&type=template&id=11bf796c&
 
 // EXTERNAL MODULE: ./node_modules/ant-design-vue/es/style/index.less
 var es_style = __webpack_require__(51);
@@ -2880,10 +2880,10 @@ Input.install = function (Vue) {
       timeDay: 3,
       timeDayTotal: 31,
       timeYear: 2020,
-      timeMonth: 10,
+      timeMonth: 11,
       data: [{
         name: '销售部',
-        target: 132,
+        target: 110,
         fulfill: 27.38
       }, {
         name: '网站部',
@@ -2898,12 +2898,12 @@ Input.install = function (Vue) {
         target: 9,
         fulfill: 3.6
       }, {
-        name: '国艺部-线上+线下',
-        target: 9.8,
+        name: '国艺-知识付费',
+        target: 20,
         fulfill: 3.71
       }, {
-        name: '国艺部-商城',
-        target: 5,
+        name: '国艺-招生',
+        target: 15,
         fulfill: 0.78
       }]
     };
@@ -2930,7 +2930,7 @@ if (style0.__inject__) style0.__inject__(context)
 
 var component = Object(componentNormalizer["a" /* default */])(
   pagesvue_type_script_lang_js_,
-  lib_vue_loader_options_pagesvue_type_template_id_771f3aca_render,
+  lib_vue_loader_options_pagesvue_type_template_id_11bf796c_render,
   staticRenderFns,
   false,
   injectStyles,

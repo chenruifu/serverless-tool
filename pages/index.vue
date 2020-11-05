@@ -121,10 +121,10 @@ export default {
             timeDay: 3,
             timeDayTotal: 31,
             timeYear: 2020,
-            timeMonth: 10,
+            timeMonth: 11,
             data: [{
                 name: '销售部',
-                target: 132,
+                target: 110,
                 fulfill: 27.38,
             }, {
                 name: '网站部',
@@ -139,12 +139,12 @@ export default {
                 target: 9,
                 fulfill: 3.6,
             }, {
-                name: '国艺部-线上+线下',
-                target: 9.8,
+                name: '国艺-知识付费',
+                target: 20,
                 fulfill: 3.71,
             }, {
-                name: '国艺部-商城',
-                target: 5,
+                name: '国艺-招生',
+                target: 15,
                 fulfill: 0.78,
             }]
 		};
