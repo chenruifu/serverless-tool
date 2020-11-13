@@ -97,7 +97,7 @@ export default {
             let thisComplete = (returnData.fulfill / returnData.total * 100).toFixed(2);
             let className = 'red';
             let classCount = thisComplete / this.timeProgress;
-            if(classCount >= 0.95) {
+            if(classCount >= 0.9) {
                 className = 'green';
             }else if(classCount >= 0.8) {
                 className = 'yellow';
