@@ -4,7 +4,7 @@ import { interopDefault } from './utils'
 import scrollBehavior from './router.scrollBehavior.js'
 
 const _5754b6a5 = () => interopDefault(import('../pages/css.vue' /* webpackChunkName: "pages/css" */))
-const _2ee22960 = () => interopDefault(import('../pages/demo1.vue' /* webpackChunkName: "pages/demo1" */))
+const _0fc23cb1 = () => interopDefault(import('../pages/demo.vue' /* webpackChunkName: "pages/demo" */))
 const _c1ff6690 = () => interopDefault(import('../pages/timestamp.vue' /* webpackChunkName: "pages/timestamp" */))
 const _e8e0b918 = () => interopDefault(import('../pages/index.vue' /* webpackChunkName: "pages/index" */))
 
@@ -29,9 +29,9 @@ export const routerOptions = {
     component: _5754b6a5,
     name: "css"
   }, {
-    path: "/demo1",
-    component: _2ee22960,
-    name: "demo1"
+    path: "/demo",
+    component: _0fc23cb1,
+    name: "demo"
   }, {
     path: "/timestamp",
     component: _c1ff6690,
