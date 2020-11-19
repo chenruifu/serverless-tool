@@ -3,24 +3,28 @@
     "name": "css",
     "path": "/css",
     "component": "/Users/chenrf/crf/serverless-tool/pages/css.vue",
-    "chunkName": "pages/css"
+    "chunkName": "pages/css",
+    "_name": "_5754b6a5"
   },
   {
     "name": "demo",
     "path": "/demo",
     "component": "/Users/chenrf/crf/serverless-tool/pages/demo.vue",
-    "chunkName": "pages/demo"
+    "chunkName": "pages/demo",
+    "_name": "_0fc23cb1"
   },
   {
     "name": "timestamp",
     "path": "/timestamp",
     "component": "/Users/chenrf/crf/serverless-tool/pages/timestamp.vue",
-    "chunkName": "pages/timestamp"
+    "chunkName": "pages/timestamp",
+    "_name": "_c1ff6690"
   },
   {
     "name": "index",
     "path": "/",
     "component": "/Users/chenrf/crf/serverless-tool/pages/index.vue",
-    "chunkName": "pages/index"
+    "chunkName": "pages/index",
+    "_name": "_e8e0b918"
   }
 ]
