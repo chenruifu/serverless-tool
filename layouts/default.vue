@@ -4,33 +4,15 @@
             <div class="header-wrap">
                 <nuxt-link :to="{name: 'index'}" class="header-wrap__logo">在线工具</nuxt-link>
                 <a-menu class="header-wrap__menu" v-model="current" mode="horizontal" theme="dark">
-                    <a-sub-menu>
-                        <span slot="title">开发工具</span>
-                        <a-menu-item key="1">时间戳转换</a-menu-item>
-                        <a-menu-item key="2">CSS尺寸转换</a-menu-item>
-                        <a-menu-item key="3">时间转换</a-menu-item>
-                        <a-menu-item key="3">SVG转base64</a-menu-item>
-                        <a-menu-item key="1">时间戳转换</a-menu-item>
-                        <a-menu-item key="2">CSS尺寸转换</a-menu-item>
-                        <a-menu-item key="3">时间转换</a-menu-item>
-                    </a-sub-menu>
-                    <a-sub-menu>
-                        <span slot="title">多媒体</span>
-                        <a-menu-item key="4">图片Base64编码</a-menu-item>
-                        <a-menu-item key="5">图片尺寸比例</a-menu-item>
-                        <a-menu-item key="6">视频截取缩略图</a-menu-item>
-                    </a-sub-menu>
-                    <a-sub-menu>
-                        <span slot="title">生活查询</span>
-                        <a-menu-item key="setting:1">年龄计算器</a-menu-item>
-                        <a-menu-item key="setting:2">生肖查询</a-menu-item>
-                        <a-menu-item key="setting:3">星座查询</a-menu-item>
+                    <a-sub-menu v-for="(item, index) in toolsMenu" :key="index">
+                        <nuxt-link slot="title" :to="{name: item.link}">{{item.name}}</nuxt-link>
+                        <a-menu-item v-for="child in item.children" :key="child.name">
+                            <nuxt-link :to="{name: 'app-'+ child.link}">{{child.name}}</nuxt-link>
+                        </a-menu-item>
                     </a-sub-menu>
                     <a-sub-menu>
                         <span slot="title">其他</span>
                         <a-menu-item key="setting:1">圆周率查询</a-menu-item>
-                        <a-menu-item key="setting:2">456</a-menu-item>
-                        <a-menu-item key="setting:3">789</a-menu-item>
                     </a-sub-menu>
                 </a-menu>
                 <a href="https://github.com/chenruifu/serverless-tool" class="header-wrap__github" target="_blank"></a>
@@ -40,7 +22,7 @@
             <section class="main-left">
                 <nuxt />
             </section>
-            <section class="main-right">
+            <section class="main-right" style="display:none;">
                 <a href="https://s.click.taobao.com/CDbz5vu" target="_blank" rel="noopener noreferrer">
                     <img style="width: 100%" src="~assets/ad-img.jpg" alt="">
                 </a>
@@ -49,7 +31,8 @@
     </div>
 </template>
 <script>
-import {Menu} from "ant-design-vue";
+import {Menu} from 'ant-design-vue';
+import tools from '@/common/tools'
 export default {
     components: {
         aMenu: Menu,
@@ -59,8 +42,12 @@ export default {
     },
     data() {
         return {
-            current: ['6'],
+            toolsMenu: tools,
+            current: ['agecalc'],
         }
+    },
+    created() {
+        console.log(tools)
     }
 }
 </script>
@@ -91,7 +78,7 @@ export default {
             line-height: 60px;
             padding-left: 40px;
             position: relative;
-            color: #fff;
+            color: #ff0000;
             &:before{
                 content: '';
                 position: absolute;
@@ -100,6 +87,7 @@ export default {
                 width: 30px;
                 height: 30px;
                 transform: translateY(-50%);
+                background-color: #ff0000;
                 background-image:url("~assets/logo.svg");
                 background-size: 100% auto;
                 background-repeat: no-repeat;
@@ -108,7 +96,7 @@ export default {
         }
         &__menu{
             float: left;
-            margin-left: 120px;
+            margin-left: 80px;
             height: 60px;
             /deep/&.ant-menu-horizontal{
                 line-height: 60px;
@@ -134,7 +122,7 @@ export default {
     overflow: hidden;
     .main-left{
         float: left;
-        width: 75%;
+        width: 100%;
     }
     .main-right{
         float: right;

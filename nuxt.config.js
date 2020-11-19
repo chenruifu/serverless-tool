@@ -2,12 +2,9 @@
 module.exports = {
     head: {
         script: [
-            {
-                'data-ad-client': 'ca-pub-4328689268449573',
-                async: true,
-                src: 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js'
-            }
+            // {async: true, src: 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js', 'data-ad-client': 'ca-pub-4328689268449573'}
         ],
+        link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
     },
     build: {
         publicPath: 'https://static.chenrf.com',
