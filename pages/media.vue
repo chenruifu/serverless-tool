@@ -1,5 +1,5 @@
 <template>
-    <div>首页</div>
+    <div>多媒体</div>
 </template>
 
 <script>

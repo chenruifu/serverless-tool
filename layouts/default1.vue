@@ -3,17 +3,19 @@
         <header class="header">
             <div class="header-wrap">
                 <nuxt-link :to="{name: 'index'}" class="header-wrap__logo">在线工具</nuxt-link>
-                <a-menu class="header-wrap__menu" v-model="current" mode="horizontal" theme="dark">
-                    <a-sub-menu v-for="(item, index) in toolsMenu" :key="index">
-                        <nuxt-link slot="title" :to="{name: item.link}">{{item.name}}</nuxt-link>
-                        <a-menu-item v-for="child in item.children" :key="child.name">
-                            <nuxt-link :to="{name: 'app-'+ child.link}">{{child.name}}</nuxt-link>
-                        </a-menu-item>
-                    </a-sub-menu>
+                <a-menu class="header-wrap__menu" v-model="current" mode="horizontal">
+                    <a-menu-item v-for="item in toolsMenu" :key="item.link">
+                        <nuxt-link :to="{name: item.link}">{{item.name}}</nuxt-link>
+                    </a-menu-item>
                     <a-sub-menu>
                         <span slot="title">其他</span>
-                        <a-menu-item key="setting:1">圆周率查询</a-menu-item>
+                        <a-menu-item key="report">
+                            <nuxt-link :to="{name: 'other-report'}">进度报表</nuxt-link>
+                        </a-menu-item>
                     </a-sub-menu>
+                    <a-menu-item>
+                        <a href="https://github.com/chenruifu/serverless-tool/issues/new" target="_blank">Issues</a>
+                    </a-menu-item>
                 </a-menu>
                 <a href="https://github.com/chenruifu/serverless-tool" class="header-wrap__github" target="_blank"></a>
             </div>
@@ -43,11 +45,8 @@ export default {
     data() {
         return {
             toolsMenu: tools,
-            current: ['agecalc'],
+            current: [this.$nuxt.$route.name],
         }
-    },
-    created() {
-        console.log(tools)
     }
 }
 </script>
@@ -61,33 +60,32 @@ export default {
 	top: 0;
 	left: 0;
     width: 100%;
-	background-color: #001529;
     z-index: 3;
     .header-wrap{
         position: relative;
         max-width: 1300px;
         min-width: 800px;
         height: 60px;
+        border-bottom: 1px solid #e8e8e8;
         margin: 0 auto;
-        color: #fff;
+        color: #333;
         &__logo{
             float: left;
             width: 140px;
             height: 60px;
             font-size: 20px;
             line-height: 60px;
-            padding-left: 40px;
+            padding-left: 46px;
             position: relative;
-            color: #ff0000;
+            color: #f8cc00;
             &:before{
                 content: '';
                 position: absolute;
                 left: 0;
                 top: 50%;
-                width: 30px;
-                height: 30px;
+                width: 36px;
+                height: 36px;
                 transform: translateY(-50%);
-                background-color: #ff0000;
                 background-image:url("~assets/logo.svg");
                 background-size: 100% auto;
                 background-repeat: no-repeat;
@@ -101,6 +99,15 @@ export default {
             /deep/&.ant-menu-horizontal{
                 line-height: 60px;
                 font-size: 16px;
+            }
+            a{
+                color: rgba(0,0,0,.65)
+            }
+            /deep/ .ant-menu-item-selected a, /deep/ .ant-menu-item-active a{
+                color: #f8cc00;
+            }
+            /deep/ .ant-menu-submenu, /deep/ .ant-menu-item{
+                height: 60px;
             }
         }
         &__github{

@@ -1,7 +1,5 @@
 <template>
-    <div>
-        demo.html
-        <nuxt-link :to="{name: 'demo1'}">跳转demo1</nuxt-link>
+    <div>生活查询
     </div>
 </template>
 
