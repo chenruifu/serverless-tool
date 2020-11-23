@@ -1,10 +1,9 @@
-// <script data-ad-client="ca-pub-4328689268449573" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 module.exports = {
     head: {
         script: [
             // {async: true, src: 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js', 'data-ad-client': 'ca-pub-4328689268449573'}
         ],
-        link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
+        link: [{ rel: 'shortcut icon', type: 'image/x-icon', href: '/favicon.ico' }]
     },
     css: [
         '~/assets/style/global.less'

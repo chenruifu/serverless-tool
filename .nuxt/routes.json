@@ -3,84 +3,98 @@
     "name": "develop",
     "path": "/develop",
     "component": "/Users/chenrf/crf/serverless-tool/pages/develop.vue",
-    "chunkName": "pages/develop"
+    "chunkName": "pages/develop",
+    "_name": "_70b8be02"
   },
   {
     "name": "life",
     "path": "/life",
     "component": "/Users/chenrf/crf/serverless-tool/pages/life.vue",
-    "chunkName": "pages/life"
+    "chunkName": "pages/life",
+    "_name": "_15e5b94a"
   },
   {
     "name": "media",
     "path": "/media",
     "component": "/Users/chenrf/crf/serverless-tool/pages/media.vue",
-    "chunkName": "pages/media"
+    "chunkName": "pages/media",
+    "_name": "_3b461186"
   },
   {
     "name": "app-agecalc",
     "path": "/app/agecalc",
     "component": "/Users/chenrf/crf/serverless-tool/pages/app/agecalc.vue",
-    "chunkName": "pages/app/agecalc"
+    "chunkName": "pages/app/agecalc",
+    "_name": "_3f91c308"
   },
   {
     "name": "app-csstransform",
     "path": "/app/csstransform",
     "component": "/Users/chenrf/crf/serverless-tool/pages/app/csstransform.vue",
-    "chunkName": "pages/app/csstransform"
+    "chunkName": "pages/app/csstransform",
+    "_name": "_8150b476"
   },
   {
     "name": "app-img2base64",
     "path": "/app/img2base64",
     "component": "/Users/chenrf/crf/serverless-tool/pages/app/img2base64.vue",
-    "chunkName": "pages/app/img2base64"
+    "chunkName": "pages/app/img2base64",
+    "_name": "_4dd5334c"
   },
   {
     "name": "app-imgsizescale",
     "path": "/app/imgsizescale",
     "component": "/Users/chenrf/crf/serverless-tool/pages/app/imgsizescale.vue",
-    "chunkName": "pages/app/imgsizescale"
+    "chunkName": "pages/app/imgsizescale",
+    "_name": "_1f620ffc"
   },
   {
     "name": "app-shengxiao",
     "path": "/app/shengxiao",
     "component": "/Users/chenrf/crf/serverless-tool/pages/app/shengxiao.vue",
-    "chunkName": "pages/app/shengxiao"
+    "chunkName": "pages/app/shengxiao",
+    "_name": "_4b608a08"
   },
   {
     "name": "app-timestamp",
     "path": "/app/timestamp",
     "component": "/Users/chenrf/crf/serverless-tool/pages/app/timestamp.vue",
-    "chunkName": "pages/app/timestamp"
+    "chunkName": "pages/app/timestamp",
+    "_name": "_bbc82f6c"
   },
   {
     "name": "app-timetransform",
     "path": "/app/timetransform",
     "component": "/Users/chenrf/crf/serverless-tool/pages/app/timetransform.vue",
-    "chunkName": "pages/app/timetransform"
+    "chunkName": "pages/app/timetransform",
+    "_name": "_8edf781a"
   },
   {
     "name": "app-video2img",
     "path": "/app/video2img",
     "component": "/Users/chenrf/crf/serverless-tool/pages/app/video2img.vue",
-    "chunkName": "pages/app/video2img"
+    "chunkName": "pages/app/video2img",
+    "_name": "_5ea93500"
   },
   {
     "name": "app-xingzuo",
     "path": "/app/xingzuo",
     "component": "/Users/chenrf/crf/serverless-tool/pages/app/xingzuo.vue",
-    "chunkName": "pages/app/xingzuo"
+    "chunkName": "pages/app/xingzuo",
+    "_name": "_cdc45fc4"
   },
   {
     "name": "other-report",
     "path": "/other/report",
     "component": "/Users/chenrf/crf/serverless-tool/pages/other/report.vue",
-    "chunkName": "pages/other/report"
+    "chunkName": "pages/other/report",
+    "_name": "_0402b5e1"
   },
   {
     "name": "index",
     "path": "/",
     "component": "/Users/chenrf/crf/serverless-tool/pages/index.vue",
-    "chunkName": "pages/index"
+    "chunkName": "pages/index",
+    "_name": "_e8e0b918"
   }
 ]
