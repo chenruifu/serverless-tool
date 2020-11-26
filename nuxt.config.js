@@ -1,5 +1,6 @@
 module.exports = {
     head: {
+        title: '在线工具',
         script: [
             // {async: true, src: 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js', 'data-ad-client': 'ca-pub-4328689268449573'}
         ],
