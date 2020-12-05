@@ -125,11 +125,11 @@ export default {
             timeMonth: 11,
             data: [{
                 name: '销售部',
-                target: 110,
+                target: 133,
                 fulfill: 27.38,
             }, {
                 name: '网站部',
-                target: 95,
+                target: 90,
                 fulfill: 36.28,
             }, {
                 name: '商务',
@@ -145,7 +145,7 @@ export default {
                 fulfill: 3.71,
             }, {
                 name: '国艺-招生',
-                target: 15,
+                target: 10,
                 fulfill: 0.78,
             }]
 		};
