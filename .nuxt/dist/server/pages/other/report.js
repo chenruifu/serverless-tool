@@ -368,7 +368,7 @@ Icon.install = function (Vue) {
 "use strict";
 /* harmony import */ var _style_index_less__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(53);
 /* harmony import */ var _style_index_less__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_style_index_less__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _index_less__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(134);
+/* harmony import */ var _index_less__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(131);
 /* harmony import */ var _index_less__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_index_less__WEBPACK_IMPORTED_MODULE_1__);
 
 
@@ -376,6 +376,19 @@ Icon.install = function (Vue) {
 /***/ }),
 
 /***/ 126:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var _style_index_less__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(53);
+/* harmony import */ var _style_index_less__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_style_index_less__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _index_less__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(134);
+/* harmony import */ var _index_less__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_index_less__WEBPACK_IMPORTED_MODULE_1__);
+
+
+
+/***/ }),
+
+/***/ 127:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -416,19 +429,6 @@ wrapperRaf.ids = ids; // export this for test usage
 
 /***/ }),
 
-/***/ 127:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var _style_index_less__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(53);
-/* harmony import */ var _style_index_less__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_style_index_less__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _index_less__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(131);
-/* harmony import */ var _index_less__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_index_less__WEBPACK_IMPORTED_MODULE_1__);
-
-
-
-/***/ }),
-
 /***/ 128:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -450,7 +450,7 @@ var defineProperty_default = /*#__PURE__*/__webpack_require__.n(defineProperty_)
 var Event = __webpack_require__(22);
 
 // EXTERNAL MODULE: ./node_modules/ant-design-vue/es/_util/raf.js
-var raf = __webpack_require__(126);
+var raf = __webpack_require__(127);
 
 // EXTERNAL MODULE: ./node_modules/ant-design-vue/es/config-provider/index.js + 7 modules
 var config_provider = __webpack_require__(27);
@@ -989,7 +989,7 @@ module.exports = exports;
 "use strict";
 /* harmony import */ var _style_index_less__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(53);
 /* harmony import */ var _style_index_less__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_style_index_less__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _grid_style__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(125);
+/* harmony import */ var _grid_style__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(126);
  // style dependencies
 // deps-lint-skip: grid
 
@@ -1030,7 +1030,7 @@ module.exports = exports;
 "use strict";
 /* harmony import */ var _style_index_less__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(53);
 /* harmony import */ var _style_index_less__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_style_index_less__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _grid_style__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(125);
+/* harmony import */ var _grid_style__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(126);
  // style dependencies
 // deps-lint-skip: grid
 
@@ -1046,7 +1046,7 @@ module.exports = exports;
 /* harmony import */ var _style_index_less__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_style_index_less__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _index_less__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(138);
 /* harmony import */ var _index_less__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_index_less__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _button_style__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(127);
+/* harmony import */ var _button_style__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(125);
 
  // style dependencies
 
@@ -1530,7 +1530,7 @@ function calculateNodeHeight(uiTextNode) {
   };
 }
 // EXTERNAL MODULE: ./node_modules/ant-design-vue/es/_util/raf.js
-var raf = __webpack_require__(126);
+var raf = __webpack_require__(127);
 
 // EXTERNAL MODULE: ./node_modules/ant-design-vue/es/_util/warning.js + 1 modules
 var warning = __webpack_require__(20);
@@ -2989,15 +2989,21 @@ module.exports = exports;
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
-// CONCATENATED MODULE: ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./pages/other/report.vue?vue&type=template&id=e9e3ca3c&
-var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',[_vm._ssrNode("<div class=\"report-progress\"><div class=\"report-progress__title\">"+_vm._ssrEscape(_vm._s(_vm.timeYear)+"年"+_vm._s(_vm.timeMonth)+"月各业务部目标进度跟踪")+"</div> <div class=\"report-progress__tag\"><span class=\"target\">月目标</span> <span class=\"complete\">目标完成率</span> <span class=\"time\">时间进度</span></div> <div class=\"report-progress__data\"><div class=\"report-percentage\"><span>0%</span> <span>10%</span> <span>20%</span> <span>30%</span> <span>40%</span> <span>50%</span> <span>60%</span> <span>70%</span> <span>80%</span> <span>90%</span> <span>100%</span></div> <div class=\"report-timeline\"><span"+(_vm._ssrStyle(null,{left: _vm.timeProgress+'%'}, null))+"></span></div> "+(_vm._ssrList((_vm.mergeData),function(item,k){return ("<div class=\"report-itembox\"><span class=\"report-itembox__name\">"+_vm._ssrEscape(_vm._s(item.name))+"</span> <div class=\"report-itembox__progress\"><span"+(_vm._ssrClass(null,item.class))+(_vm._ssrStyle(null,{width: item.complete+'%'}, null))+">"+_vm._ssrEscape(_vm._s(parseFloat(item.fulfill).toFixed(1))+"W / "+_vm._s(item.complete)+"%")+"</span></div> <span class=\"report-itembox__target\">"+_vm._ssrEscape(_vm._s(item.target)+"万")+"</span></div>")}))+" <div class=\"report-total\"><div class=\"report-total__item report-total__item--blue\"><p>总目标</p><b>"+_vm._ssrEscape(_vm._s(_vm.totalData.total)+"W")+"</b></div> <div class=\"report-total__item report-total__item--blue\"><p>目标完成</p><b>"+_vm._ssrEscape(_vm._s(parseFloat(_vm.totalData.fulfill).toFixed(1))+"W / "+_vm._s(parseFloat(_vm.totalData.complete).toFixed(1))+"%")+"</b></div> <div"+(_vm._ssrClass("report-total__item",_vm.totalData.class))+"><p>完成进度</p><b>"+_vm._ssrEscape(_vm._s(_vm.totalData.count)+"%")+"</b></div></div></div></div> "),_vm._ssrNode("<div class=\"report-input\">","</div>",[_c('a-row',{attrs:{"gutter":12}},[_vm._l((_vm.data),function(item,k){return _c('a-col',{key:k,attrs:{"span":5}},[_c('span',[_vm._v(_vm._s(item.name))]),_vm._v(" "),_c('a-input',{attrs:{"size":"large","placeholder":"目标值"},model:{value:(item.target),callback:function ($$v) {_vm.$set(item, "target", $$v)},expression:"item.target"}}),_vm._v(" "),_c('a-input',{attrs:{"size":"large","placeholder":"当前完成值"},model:{value:(item.fulfill),callback:function ($$v) {_vm.$set(item, "fulfill", $$v)},expression:"item.fulfill"}})],1)}),_vm._v(" "),_c('a-col',{attrs:{"span":5}},[_c('span',[_vm._v("当前天数/月总天数")]),_vm._v(" "),_c('a-input',{attrs:{"size":"large","placeholder":"当前天"},model:{value:(_vm.timeDay),callback:function ($$v) {_vm.timeDay=$$v},expression:"timeDay"}}),_vm._v(" "),_c('a-input',{attrs:{"size":"large","placeholder":"当月总天数"},model:{value:(_vm.timeDayTotal),callback:function ($$v) {_vm.timeDayTotal=$$v},expression:"timeDayTotal"}})],1),_vm._v(" "),_c('a-col',{attrs:{"span":5}},[_c('span',[_vm._v("年份/月份")]),_vm._v(" "),_c('a-input',{attrs:{"size":"large","placeholder":"当前年份"},model:{value:(_vm.timeYear),callback:function ($$v) {_vm.timeYear=$$v},expression:"timeYear"}}),_vm._v(" "),_c('a-input',{attrs:{"size":"large","placeholder":"当前月份"},model:{value:(_vm.timeMonth),callback:function ($$v) {_vm.timeMonth=$$v},expression:"timeMonth"}})],1)],2)],1)],2)}
+// CONCATENATED MODULE: ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./pages/other/report.vue?vue&type=template&id=49563fad&
+var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',[_vm._ssrNode("<div class=\"report-progress\"><div class=\"report-progress__title\">"+_vm._ssrEscape(_vm._s(_vm.timeYear)+"年"+_vm._s(_vm.timeMonth)+"月各业务部目标进度跟踪")+"</div> <div class=\"report-progress__tag\"><span class=\"target\">月目标</span> <span class=\"complete\">目标完成率</span> <span class=\"time\">时间进度</span></div> <div class=\"report-progress__data\"><div class=\"report-percentage\"><span>0%</span> <span>10%</span> <span>20%</span> <span>30%</span> <span>40%</span> <span>50%</span> <span>60%</span> <span>70%</span> <span>80%</span> <span>90%</span> <span>100%</span></div> <div class=\"report-timeline\"><span"+(_vm._ssrStyle(null,{left: _vm.timeProgress+'%'}, null))+"></span></div> "+(_vm._ssrList((_vm.mergeData),function(item,k){return ("<div class=\"report-itembox\"><span class=\"report-itembox__name\">"+_vm._ssrEscape(_vm._s(item.name))+"</span> <div class=\"report-itembox__progress\"><span"+(_vm._ssrClass(null,item.class))+(_vm._ssrStyle(null,{width: item.complete+'%'}, null))+">"+_vm._ssrEscape(_vm._s(parseFloat(item.fulfill).toFixed(1))+"W / "+_vm._s(item.complete)+"%")+"</span></div> <span class=\"report-itembox__target\">"+_vm._ssrEscape(_vm._s(item.target)+"万")+"</span></div>")}))+" <div class=\"report-total\"><div class=\"report-total__item report-total__item--blue\"><p>总目标</p><b>"+_vm._ssrEscape(_vm._s(_vm.totalData.total)+"W")+"</b></div> <div class=\"report-total__item report-total__item--blue\"><p>目标完成</p><b>"+_vm._ssrEscape(_vm._s(parseFloat(_vm.totalData.fulfill).toFixed(1))+"W / "+_vm._s(parseFloat(_vm.totalData.complete).toFixed(1))+"%")+"</b></div> <div"+(_vm._ssrClass("report-total__item",_vm.totalData.class))+"><p>完成进度</p><b>"+_vm._ssrEscape(_vm._s(_vm.totalData.count)+"%")+"</b></div></div></div></div> "),_vm._ssrNode("<div class=\"report-input\">","</div>",[_c('a-row',{attrs:{"gutter":12,"type":"flex","justify":"center"}},[_vm._l((_vm.data),function(item,k){return _c('a-col',{key:k,attrs:{"span":5}},[_c('span',[_vm._v(_vm._s(item.name))]),_vm._v(" "),_c('a-input',{attrs:{"size":"large","placeholder":"目标值"},model:{value:(item.target),callback:function ($$v) {_vm.$set(item, "target", $$v)},expression:"item.target"}}),_vm._v(" "),_c('a-input',{attrs:{"size":"large","placeholder":"当前完成值"},model:{value:(item.fulfill),callback:function ($$v) {_vm.$set(item, "fulfill", $$v)},expression:"item.fulfill"}})],1)}),_vm._v(" "),_c('a-col',{attrs:{"span":5}},[_c('span',[_vm._v("当前天数/月总天数")]),_vm._v(" "),_c('a-input',{attrs:{"size":"large","placeholder":"当前天"},model:{value:(_vm.timeDay),callback:function ($$v) {_vm.timeDay=$$v},expression:"timeDay"}}),_vm._v(" "),_c('a-input',{attrs:{"size":"large","placeholder":"当月总天数"},model:{value:(_vm.timeDayTotal),callback:function ($$v) {_vm.timeDayTotal=$$v},expression:"timeDayTotal"}})],1),_vm._v(" "),_c('a-col',{attrs:{"span":5}},[_c('span',[_vm._v("年份/月份")]),_vm._v(" "),_c('a-input',{attrs:{"size":"large","placeholder":"当前年份"},model:{value:(_vm.timeYear),callback:function ($$v) {_vm.timeYear=$$v},expression:"timeYear"}}),_vm._v(" "),_c('a-input',{attrs:{"size":"large","placeholder":"当前月份"},model:{value:(_vm.timeMonth),callback:function ($$v) {_vm.timeMonth=$$v},expression:"timeMonth"}})],1)],2),_vm._ssrNode(" "),_vm._ssrNode("<div style=\"text-align: center\">","</div>",[_c('a-button',{attrs:{"type":"primary","size":"large"},on:{"click":_vm.saveData}},[_vm._v("保存当前数据")])],1)],2)],2)}
 var staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./pages/other/report.vue?vue&type=template&id=e9e3ca3c&
+// CONCATENATED MODULE: ./pages/other/report.vue?vue&type=template&id=49563fad&
+
+// EXTERNAL MODULE: ./node_modules/ant-design-vue/es/button/style/index.js
+var style = __webpack_require__(125);
+
+// EXTERNAL MODULE: ./node_modules/ant-design-vue/es/button/index.js + 4 modules
+var es_button = __webpack_require__(128);
 
 // EXTERNAL MODULE: ./node_modules/ant-design-vue/es/col/style/index.js
-var style = __webpack_require__(133);
+var col_style = __webpack_require__(133);
 
 // EXTERNAL MODULE: ./node_modules/ant-design-vue/es/col/index.js + 1 modules
 var col = __webpack_require__(144);
@@ -3021,11 +3027,14 @@ var input = __webpack_require__(142);
 
 
 
+
+
 /* harmony default export */ var reportvue_type_script_lang_js_ = ({
   components: {
     aInput: input["a" /* default */],
     aRow: row["a" /* default */],
-    aCol: col["a" /* default */]
+    aCol: col["a" /* default */],
+    aButton: es_button["a" /* default */]
   },
   computed: {
     // 数据计算
@@ -3090,8 +3099,6 @@ var input = __webpack_require__(142);
   },
 
   data() {
-    let thisDay = new Date().getDate() - 1;
-    let days = new Date(new Date().getFullYear(), new Date().getMonth() + 1, 0).getDate();
     return {
       timeDay: 3,
       timeDayTotal: 30,
@@ -3123,8 +3130,33 @@ var input = __webpack_require__(142);
         fulfill: 0.78
       }]
     };
-  }
+  },
 
+  mounted() {
+    let loaclData = localStorage.getItem('businessData');
+    let businessData = JSON.parse(loaclData);
+    if (businessData.timeDay) this.timeDay = businessData.timeDay;
+    if (businessData.timeDayTotal) this.timeDayTotal = businessData.timeDayTotal;
+    if (businessData.timeYear) this.timeYear = businessData.timeYear;
+    if (businessData.timeMonth) this.timeMonth = businessData.timeMonth;
+    if (businessData.data) this.data = businessData.data;
+  },
+
+  methods: {
+    // 本地存储
+    saveData() {
+      let data = {
+        timeDay: this.timeDay,
+        timeDayTotal: this.timeDayTotal,
+        timeYear: this.timeYear,
+        timeMonth: this.timeMonth,
+        data: this.data
+      };
+      localStorage.setItem('businessData', JSON.stringify(data));
+      alert('保存成功');
+    }
+
+  }
 });
 // CONCATENATED MODULE: ./pages/other/report.vue?vue&type=script&lang=js&
  /* harmony default export */ var other_reportvue_type_script_lang_js_ = (reportvue_type_script_lang_js_); 

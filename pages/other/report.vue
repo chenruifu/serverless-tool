@@ -37,7 +37,7 @@
             </div>
         </div>
         <div class="report-input">
-            <a-row :gutter="12">
+            <a-row :gutter="12" type="flex" justify="center">
                 <a-col :span="5" v-for="(item, k) in data" :key="k">
                     <span>{{item.name}}</span>
                     <a-input size="large" v-model="item.target" placeholder="目标值" />
@@ -54,16 +54,20 @@
                     <a-input size="large" v-model="timeMonth" placeholder="当前月份" />
                 </a-col>
             </a-row>
+            <div style="text-align: center">
+                <a-button type="primary" size="large" @click="saveData">保存当前数据</a-button>
+            </div>
         </div>
     </div>
 </template>
 <script>
-import {Input, Row, Col} from 'ant-design-vue';
+import {Input, Row, Col, Button} from 'ant-design-vue';
 export default {
 	components: {
         aInput: Input,
         aRow: Row,
-        aCol: Col
+        aCol: Col,
+        aButton: Button
 	},
     computed: {
         // 数据计算
@@ -116,8 +120,6 @@ export default {
         }
     },
 	data() {
-        let thisDay = new Date().getDate() - 1;
-        let days = new Date(new Date().getFullYear(), new Date().getMonth() + 1, 0).getDate();
 		return {
             timeDay: 3,
             timeDayTotal: 30,
@@ -150,6 +152,29 @@ export default {
             }]
 		};
 	},
+    mounted() {
+        let loaclData = localStorage.getItem('businessData');
+        let businessData = JSON.parse(loaclData)
+        if(businessData.timeDay) this.timeDay = businessData.timeDay;
+        if(businessData.timeDayTotal) this.timeDayTotal = businessData.timeDayTotal;
+        if(businessData.timeYear) this.timeYear = businessData.timeYear;
+        if(businessData.timeMonth) this.timeMonth = businessData.timeMonth;
+        if(businessData.data) this.data = businessData.data;
+    },
+    methods: {
+        // 本地存储
+        saveData() {
+            let data = {
+                timeDay: this.timeDay,
+                timeDayTotal: this.timeDayTotal,
+                timeYear: this.timeYear,
+                timeMonth: this.timeMonth,
+                data: this.data
+            }
+            localStorage.setItem('businessData', JSON.stringify(data));
+            alert('保存成功');
+        }
+    }
 };
 </script>
 <style lang="less">
