@@ -2,9 +2,9 @@
   "name": "serverless-tool",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "deploy:server": "",
+    "deploy:fe": "cd frontend && nuxt build && sls --debug"
   },
   "repository": {
     "type": "git",
