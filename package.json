@@ -1,32 +1,19 @@
 {
   "name": "serverless-tool",
   "version": "1.0.0",
-  "description": "serverless前端工具集",
+  "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "nuxt",
-    "build": "nuxt build",
-    "start": "nuxt start",
-    "generate": "nuxt generate",
-    "deploy": "nuxt build && sls --debug"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/chenruifu/serverless-tool.git"
   },
-  "author": "chenrf",
+  "author": "",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/chenruifu/serverless-tool/issues"
   },
-  "homepage": "https://github.com/chenruifu/serverless-tool#readme",
-  "dependencies": {
-    "ant-design-vue": "^1.6.5",
-    "nuxt": "^2.14.6"
-  },
-  "devDependencies": {
-    "babel-plugin-import": "^1.13.1",
-    "less": "^3.12.2",
-    "less-loader": "^7.0.2"
-  }
+  "homepage": "https://github.com/chenruifu/serverless-tool#readme"
 }
