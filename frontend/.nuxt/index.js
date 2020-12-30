@@ -12,6 +12,8 @@ import { setContext, getLocation, getRouteData, normalizeError } from './utils'
 
 /* Plugins */
 
+import nuxt_plugin_tencentupload_d1c5b9d0 from 'nuxt_plugin_tencentupload_d1c5b9d0' // Source: ../plugins/tencent-upload.js (mode: 'client')
+
 // Component: <ClientOnly>
 Vue.component(ClientOnly.name, ClientOnly)
 
@@ -169,6 +171,10 @@ async function createApp(ssrContext, config = {}) {
     }
   }
   // Plugin execution
+
+  if (process.client && typeof nuxt_plugin_tencentupload_d1c5b9d0 === 'function') {
+    await nuxt_plugin_tencentupload_d1c5b9d0(app.context, inject)
+  }
 
   // Lock enablePreview in context
   if (process.static && process.client) {

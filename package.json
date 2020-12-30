@@ -3,8 +3,11 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "deploy:server": "",
-    "deploy:fe": "cd frontend && nuxt build && sls --debug"
+    "deploy:all": "sls deploy --debug --all",
+    "deploy:server": "sls --debug --target server",
+    "deploy:frontend": "sls --debug --target frontend",
+    "deploy:server-layer": "sls --debug --target server/layer",
+    "deploy:frontend-layer": "sls --debug --target frontend/layer"
   },
   "repository": {
     "type": "git",

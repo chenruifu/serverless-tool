@@ -1,0 +1,31 @@
+#组件信息
+component: express # (必填) 组件名称，此处为 nuxtjs
+name: express-tool # (必填) 实例名称
+
+#组件参数配置
+inputs:
+    region: ${env:REGION}
+    functionName: ${name} #函数名称
+    serviceName: toolapi_chenrf_com #API 网关服务名称, 默认创建一个新的服务名称
+    serviceId: service-59ujt2zu # api网关服务ID
+    runtime: Nodejs12.16
+    # 执行目录
+    src:
+        src: ./ # 代码路径
+        exclude: # 不包含的文件或路径
+            - '.git/**'
+            - 'node_modules/**'
+    # 层设置
+    layers:
+        - name: ${name}-layer
+          version: 3
+    functionConf: # 函数配置相关
+        timeout: 6 # 超时时间，单位秒
+        eip: false # 是否固定出口IP
+        memorySize: 384 # 内存大小，单位MB
+        environment: #  环境变量
+            variables: #  环境变量数组
+                TEST: vale
+        vpcConfig: # 私有网络配置
+            vpcId: '' # 私有网络的Id
+            subnetId: '' # 子网ID

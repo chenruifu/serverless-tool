@@ -1,12 +1,12 @@
-component: nuxtjs # (必填) 组件名称，此处为 nuxtjs
-name: tool-chenrf-com # (必填) 实例名称
-org: chenrf # (可选) 用于记录组织信息，默认值为您的腾讯云账户 APPID
-app: tool # (可选) 该 nuxt.js 项目名称
-stage: dev # (可选) 用于区分环境信息，默认值是 dev
 
+#组件信息
+component: nuxtjs # (必填) 组件名称，此处为 nuxtjs
+name: nuxtjs-tool # (必填) 实例名称
+
+#组件参数配置
 inputs:
-    region: ap-guangzhou
-    functionName: tool-chenrf-com #函数名称
+    region: ${env:REGION}
+    functionName: ${name} #函数名称
     serviceName: tool_chenrf_com #API 网关服务名称, 默认创建一个新的服务名称
     serviceId: service-5q30wfbe # api网关服务ID
     runtime: Nodejs12.16
@@ -19,8 +19,8 @@ inputs:
             - 'node_modules/**'
     # 层设置
     layers:
-        - name: ${output:${stage}:${app}:tool-layer.name}
-          version: ${output:${stage}:${app}:tool-layer.version}
+        - name: ${name}-layer
+          version: 1
     functionConf: # 函数配置相关
         timeout: 6 # 超时时间，单位秒
         eip: false # 是否固定出口IP

@@ -9,6 +9,9 @@ module.exports = {
     css: [
         '~/assets/style/global.less'
     ],
+    plugins: [
+        {src:'~/plugins/tencent-upload.js', mode: 'client'}
+    ],
     build: {
         publicPath: 'https://static.chenrf.com',
         // extend(config, { isDev, isClient }) {

@@ -1,10 +1,19 @@
 <template>
-    <div>首页</div>
+    <div>
+        <upload-video />
+    </div>
 </template>
 
 <script>
 export default {
-
+    data() {
+        return {
+        }
+    },
+    created() {
+    },
+    methods: {
+    }
 }
 </script>
 

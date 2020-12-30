@@ -1,0 +1,14 @@
+#应用组织信息（可选）
+org: chenrf # 组织名称。留空则则使用默认值为用户 APPID
+app: tool.chenrf.com # 应用名称。留空则默认取当前组件的实例名称为app名称。
+stage: dev  # 环境名称。默认值是 dev
+
+#组件信息
+name: tool # (必选) 组件实例名称。
+
+#组件参数配置
+src:
+    src: ./ # 代码路径
+    exclude: # 不包含的文件或路径
+        - '.git/**'
+        - 'node_modules/**'
