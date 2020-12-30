@@ -1,29 +1,18 @@
 <template>
     <div>
-        <input type="file" ref="vExampleFile" @change="fileChange" />
+        <input type="file" ref="inputFile" />
         <div class="row" style="padding:10px;">
             <h4 @click="upload">上传视频</h4>
         </div>
         <div class="row" id="resultBox">
             <!-- 上传信息组件	 -->
-            <div class="uploaderMsgBox" v-for="uploaderInfo in uploaderInfos" :key="uploaderInfo.fileId">
-                <div v-if="uploaderInfo.videoInfo">
-                    视频名称：{{uploaderInfo.videoInfo.name + '.' + uploaderInfo.videoInfo.type}}；
-                    上传进度：{{Math.floor(uploaderInfo.progress * 100) + '%'}}；
-                    fileId：{{uploaderInfo.fileId}}；
-                    上传结果：{{uploaderInfo.isVideoUploadCancel ? '已取消' : uploaderInfo.isVideoUploadSuccess ? '上传成功' : '上传中'}}；
-                    <br>
-                    地址：{{uploaderInfo.videoUrl}}；
-                    <a href="javascript:void(0);" class="cancel-upload" v-if="!uploaderInfo.isVideoUploadSuccess && !uploaderInfo.isVideoUploadCancel" @click="uploaderInfo.cancel()">取消上传</a><br>
-                </div>
-
-                <div v-if="uploaderInfo.coverInfo">
-                    封面名称：{{uploaderInfo.coverInfo.name}}；
-                    上传进度：{{Math.floor(uploaderInfo.coverProgress * 100) + '%'}}；
-                    上传结果：{{uploaderInfo.isCoverUploadSuccess ? '上传成功' : '上传中'}}；
-                    <br>
-                    地址：{{uploaderInfo.coverUrl}}；
-                    <br>
+            <div class="uploaderMsgBox" v-for="info in uploaderArr" :key="info.key">
+                <div v-if="info.videoInfo">
+                    视频名称：{{info.videoInfo.name + '.' + info.videoInfo.type}}；
+                    上传进度：{{Math.floor(info.progress * 100) + '%'}}；
+                    fileId：{{info.fileId}}；
+                    上传结果：{{info.isVideoUploadCancel ? '已取消' : info.isVideoUploadSuccess ? '上传成功' : '上传中'}}；
+                    <a href="javascript:void(0);" class="cancel-upload" v-if="!info.isVideoUploadSuccess && !info.isVideoUploadCancel" @click="info.cancel()">取消上传</a><br>
                 </div>
             </div>
         </div>
@@ -37,48 +26,62 @@ export default {
     data() {
         return {
             tcVod: '',
-            signature: '',
+            uploaderArr: []
         }
-    },
-    props: {
-        options: {
-            type: Object,
-            default () {
-                return {};
-            },
-        },
     },
     created: function () {
         let that = this;
         axios.get('https://toolapi.chenrf.com/get-tcsign').then(function(res) {
-            that.signature = res.data;
+            console.log(res.data);
             that.tcVod = new TcVod({
-                getSignature: res.data
+                getSignature: () => res.data.data
             });
         });
     },
     methods: {
-        vExampleAdd: function () {
-            this.$refs.vExampleFile.click()
+        upload() {
+            const mediaFile = this.$refs.inputFile.files[0];
+            if(!mediaFile){
+                alert('请选择上传的媒体文件');
+                return;
+            }
+            console.log(this.tcVod);
+            const uploader = this.tcVod.upload({
+                mediaFile: mediaFile,
+            })
+            // 上传信息对象
+            let uploaderInfo = {
+                key: new Date().getTime(),
+                videoInfo: uploader.videoInfo,
+                isVideoUploadSuccess: false,
+                isVideoUploadCancel: false,
+                progress: 0,
+                fileId: '',
+                videoUrl: '',
+                cancel: function () {
+                    uploaderInfo.isVideoUploadCancel = true;
+                    uploader.cancel()
+                },
+            }
+            // 进度
+            uploader.on('media_progress', function(info) {
+                uploaderInfo.progress = info.percent;
+            })
+            // 上传完成
+            uploader.done().then(function (doneResult) {
+                uploaderInfo.isVideoUploadSuccess = true;
+                uploaderInfo.fileId = doneResult.fileId;
+            })
+
+            this.uploaderArr.push(uploaderInfo)
         },
-        /**
-         * 上传视频过程
-         **/
         vExampleUpload: function () {
             var self = this;
             var mediaFile = this.$refs.vExampleFile.files[0]
 
-            var uploader = this.tcVod.upload({
+            const uploader = this.tcVod.upload({
                 mediaFile: mediaFile,
             })
-            uploader.on('media_progress', function (info) {
-                uploaderInfo.progress = info.percent;
-            })
-            uploader.on('media_upload', function (info) {
-                uploaderInfo.isVideoUploadSuccess = true;
-            })
-
-            console.log(uploader, 'uploader')
 
             var uploaderInfo = {
                 videoInfo: uploader.videoInfo,
@@ -92,6 +95,15 @@ export default {
                     uploader.cancel()
                 },
             }
+            // 进度
+            uploader.on('media_progress', function (info) {
+                uploaderInfo.progress = info.percent;
+            })
+            uploader.on('media_upload', function (info) {
+                uploaderInfo.isVideoUploadSuccess = true;
+            })
+
+            
 
             this.uploaderInfos.push(uploaderInfo)
 
@@ -100,7 +112,7 @@ export default {
 
                 uploaderInfo.fileId = doneResult.fileId;
 
-                return getAntiLeechUrl(doneResult.video.url);
+                // return getAntiLeechUrl(doneResult.video.url);
             }).then(function (videoUrl) {
                 uploaderInfo.videoUrl = videoUrl
                 self.$refs.vExample.reset();
