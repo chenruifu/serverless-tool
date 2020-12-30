@@ -1,0 +1,37 @@
+{
+  "entry": "server.js",
+  "files": {
+    "pages/app/agecalc.js": "pages/app/agecalc.js",
+    "pages/app/csstransform.js": "pages/app/csstransform.js",
+    "pages/app/img2base64.js": "pages/app/img2base64.js",
+    "pages/app/imgsizescale.js": "pages/app/imgsizescale.js",
+    "pages/app/shengxiao.js": "pages/app/shengxiao.js",
+    "pages/app/timestamp.js": "pages/app/timestamp.js",
+    "pages/app/timetransform.js": "pages/app/timetransform.js",
+    "pages/app/video2img.js": "pages/app/video2img.js",
+    "pages/app/xingzuo.js": "pages/app/xingzuo.js",
+    "pages/develop.js": "pages/develop.js",
+    "pages/index.js": "pages/index.js",
+    "pages/life.js": "pages/life.js",
+    "pages/media.js": "pages/media.js",
+    "pages/other/report.js": "pages/other/report.js",
+    "server.js": "server.js"
+  },
+  "maps": {
+    "pages/app/agecalc.js": "pages/app/agecalc.js.map",
+    "pages/app/csstransform.js": "pages/app/csstransform.js.map",
+    "pages/app/img2base64.js": "pages/app/img2base64.js.map",
+    "pages/app/imgsizescale.js": "pages/app/imgsizescale.js.map",
+    "pages/app/shengxiao.js": "pages/app/shengxiao.js.map",
+    "pages/app/timestamp.js": "pages/app/timestamp.js.map",
+    "pages/app/timetransform.js": "pages/app/timetransform.js.map",
+    "pages/app/video2img.js": "pages/app/video2img.js.map",
+    "pages/app/xingzuo.js": "pages/app/xingzuo.js.map",
+    "pages/develop.js": "pages/develop.js.map",
+    "pages/index.js": "pages/index.js.map",
+    "pages/life.js": "pages/life.js.map",
+    "pages/media.js": "pages/media.js.map",
+    "pages/other/report.js": "pages/other/report.js.map",
+    "server.js": "server.js.map"
+  }
+}
