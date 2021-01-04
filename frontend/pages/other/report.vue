@@ -154,7 +154,7 @@ export default {
 	},
     mounted() {
         let loaclData = localStorage.getItem('businessData');
-        let businessData = JSON.parse(loaclData)
+        let businessData = JSON.parse(loaclData) || {};
         if(businessData.timeDay) this.timeDay = businessData.timeDay;
         if(businessData.timeDayTotal) this.timeDayTotal = businessData.timeDayTotal;
         if(businessData.timeYear) this.timeYear = businessData.timeYear;
