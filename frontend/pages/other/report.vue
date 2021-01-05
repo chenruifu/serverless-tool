@@ -126,7 +126,11 @@ export default {
             timeYear: 2020,
             timeMonth: 11,
             data: [{
-                name: '销售部',
+                name: '咨询服务',
+                target: 133,
+                fulfill: 27.38,
+            },{
+                name: '电商',
                 target: 133,
                 fulfill: 27.38,
             }, {
