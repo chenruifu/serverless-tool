@@ -1,7 +1,7 @@
 exports.ids = [8];
 exports.modules = {
 
-/***/ 167:
+/***/ 180:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -24,7 +24,7 @@ var staticRenderFns = []
 // CONCATENATED MODULE: ./pages/app/video2img.vue?vue&type=script&lang=js&
  /* harmony default export */ var app_video2imgvue_type_script_lang_js_ = (video2imgvue_type_script_lang_js_); 
 // EXTERNAL MODULE: ./node_modules/vue-loader/lib/runtime/componentNormalizer.js
-var componentNormalizer = __webpack_require__(10);
+var componentNormalizer = __webpack_require__(13);
 
 // CONCATENATED MODULE: ./pages/app/video2img.vue
 

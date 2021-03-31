@@ -1,5 +1,9 @@
 <template>
-    <div>多媒体</div>
+    <div>
+        <h2>多媒体</h2>
+        <nuxt-link :to="{name: 'app-imgsizescale'}">图片尺寸比例</nuxt-link>
+    </div>
+    
 </template>
 
 <script>

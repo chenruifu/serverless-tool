@@ -15,6 +15,7 @@ const _5530d9c3 = () => interopDefault(import('../pages/app/timestamp.vue' /* we
 const _0c6dd0ec = () => interopDefault(import('../pages/app/timetransform.vue' /* webpackChunkName: "pages/app/timetransform" */))
 const _f87f520e = () => interopDefault(import('../pages/app/video2img.vue' /* webpackChunkName: "pages/app/video2img" */))
 const _5cfa6852 = () => interopDefault(import('../pages/app/xingzuo.vue' /* webpackChunkName: "pages/app/xingzuo" */))
+const _bb55d668 = () => interopDefault(import('../pages/other/performance.vue' /* webpackChunkName: "pages/other/performance" */))
 const _4f859d70 = () => interopDefault(import('../pages/other/report.vue' /* webpackChunkName: "pages/other/report" */))
 const _7933c426 = () => interopDefault(import('../pages/index.vue' /* webpackChunkName: "pages/index" */))
 
@@ -82,6 +83,10 @@ export const routerOptions = {
     path: "/app/xingzuo",
     component: _5cfa6852,
     name: "app-xingzuo"
+  }, {
+    path: "/other/performance",
+    component: _bb55d668,
+    name: "other-performance"
   }, {
     path: "/other/report",
     component: _4f859d70,

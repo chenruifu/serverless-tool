@@ -84,6 +84,13 @@
     "_name": "_5cfa6852"
   },
   {
+    "name": "other-performance",
+    "path": "/other/performance",
+    "component": "/Users/chenrf/crf/serverless-tool/frontend/pages/other/performance.vue",
+    "chunkName": "pages/other/performance",
+    "_name": "_bb55d668"
+  },
+  {
     "name": "other-report",
     "path": "/other/report",
     "component": "/Users/chenrf/crf/serverless-tool/frontend/pages/other/report.vue",

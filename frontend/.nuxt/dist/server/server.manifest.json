@@ -14,6 +14,7 @@
     "pages/index.js": "pages/index.js",
     "pages/life.js": "pages/life.js",
     "pages/media.js": "pages/media.js",
+    "pages/other/performance.js": "pages/other/performance.js",
     "pages/other/report.js": "pages/other/report.js",
     "server.js": "server.js"
   },
@@ -31,6 +32,7 @@
     "pages/index.js": "pages/index.js.map",
     "pages/life.js": "pages/life.js.map",
     "pages/media.js": "pages/media.js.map",
+    "pages/other/performance.js": "pages/other/performance.js.map",
     "pages/other/report.js": "pages/other/report.js.map",
     "server.js": "server.js.map"
   }

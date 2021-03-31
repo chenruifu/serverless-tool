@@ -11,6 +11,9 @@
                     <a-menu-item key="report">
                         <nuxt-link :to="{name: 'other-report'}">进度报表</nuxt-link>
                     </a-menu-item>
+                    <a-menu-item key="performance">
+                        <nuxt-link :to="{name: 'other-performance'}">绩效奖金</nuxt-link>
+                    </a-menu-item>
                 </a-sub-menu>
                 <a-menu-item>
                     <a href="https://github.com/chenruifu/serverless-tool/issues/new" target="_blank">Issues</a>

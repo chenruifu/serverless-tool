@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[13],{689:function(n,t,e){"use strict";e.r(t);var o={data:function(){return{}},created:function(){},methods:{}},c=e(21),component=Object(c.a)(o,(function(){var n=this.$createElement,t=this._self._c||n;return t("div",[t("upload-video")],1)}),[],!1,null,null,null);t.default=component.exports}}]);
