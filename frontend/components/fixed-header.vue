@@ -48,6 +48,7 @@ export default {
 	top: 0;
 	left: 0;
     width: 100%;
+    background-color: #fff;
     z-index: 3;
     .header-wrap{
         position: relative;
