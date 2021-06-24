@@ -2,15 +2,20 @@ module.exports = {
     head: {
         title: '在线工具',
         script: [
-            // {async: true, src: 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js', 'data-ad-client': 'ca-pub-4328689268449573'}
         ],
-        link: [{ rel: 'shortcut icon', type: 'image/x-icon', href: '/favicon.ico' }]
+        meta: [
+            { charset: 'utf-8' },
+            { name: 'viewport', content: 'width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no' }
+        ],
+        link: [
+            { rel: 'shortcut icon', type: 'image/x-icon', href: '/favicon.ico' }
+        ]
     },
     css: [
         '~/assets/style/global.less'
     ],
     plugins: [
-        {src:'~/plugins/tencent-upload.js', mode: 'client'}
+
     ],
     build: {
         publicPath: 'https://static.chenrf.com',

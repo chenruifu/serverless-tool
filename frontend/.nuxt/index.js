@@ -12,8 +12,6 @@ import { setContext, getLocation, getRouteData, normalizeError } from './utils'
 
 /* Plugins */
 
-import nuxt_plugin_tencentupload_d1c5b9d0 from 'nuxt_plugin_tencentupload_d1c5b9d0' // Source: ../plugins/tencent-upload.js (mode: 'client')
-
 // Component: <ClientOnly>
 Vue.component(ClientOnly.name, ClientOnly)
 
@@ -58,7 +56,7 @@ async function createApp(ssrContext, config = {}) {
   // here we inject the router and store to all child components,
   // making them available everywhere as `this.$router` and `this.$store`.
   const app = {
-    head: {"title":"在线工具","script":[],"link":[{"rel":"shortcut icon","type":"image\u002Fx-icon","href":"\u002Ffavicon.ico"}],"meta":[],"style":[]},
+    head: {"title":"在线工具","script":[],"meta":[{"charset":"utf-8"},{"name":"viewport","content":"width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"}],"link":[{"rel":"shortcut icon","type":"image\u002Fx-icon","href":"\u002Ffavicon.ico"}],"style":[]},
 
     router,
     nuxt: {
@@ -171,10 +169,6 @@ async function createApp(ssrContext, config = {}) {
     }
   }
   // Plugin execution
-
-  if (process.client && typeof nuxt_plugin_tencentupload_d1c5b9d0 === 'function') {
-    await nuxt_plugin_tencentupload_d1c5b9d0(app.context, inject)
-  }
 
   // Lock enablePreview in context
   if (process.static && process.client) {

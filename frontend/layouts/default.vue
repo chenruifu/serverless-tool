@@ -1,45 +1,80 @@
 <template>
-    <div class="layout-default">
-        <fixed-header />
-        <main class="main">
-            <nuxt />
-        </main>
-        <footer class="footer">
-            <a href="https://beian.miit.gov.cn/">闽ICP备15003716号-4</a>
-        </footer>
-    </div>
+    <a-layout id="components-layout-demo-custom-trigger">
+        <a-layout-sider v-model="collapsed" :trigger="null" collapsible collapsedWidth="0">
+            <div class="logo" />
+            <a-menu theme="dark" mode="inline" :default-selected-keys="['1']">
+                <a-menu-item key="1">
+                    <a-icon type="user" />
+                    <span>nav 1</span>
+                </a-menu-item>
+                <a-menu-item key="2">
+                    <a-icon type="video-camera" />
+                    <span>nav 2</span>
+                </a-menu-item>
+                <a-menu-item key="3">
+                    <a-icon type="upload" />
+                    <span>nav 3</span>
+                </a-menu-item>
+            </a-menu>
+        </a-layout-sider>
+        <a-layout>
+            <a-layout-header style="background: #fff; padding: 0">
+                <a-icon
+                    class="trigger"
+                    :type="collapsed ? 'menu-unfold' : 'menu-fold'"
+                    @click="() => (collapsed = !collapsed)"
+                />
+            </a-layout-header>
+            <a-layout-content
+                :style="{
+                    margin: '24px 16px',
+                    padding: '24px',
+                    background: '#fff',
+                    minHeight: '280px',
+                }"
+            >
+                Content
+            </a-layout-content>
+        </a-layout>
+    </a-layout>
 </template>
 <script>
-import fixedHeader from '@/components/fixed-header'
+import { Menu, Layout, Icon } from "ant-design-vue";
 export default {
     components: {
-        fixedHeader
+        aLayout: Layout,
+        aLayoutSider: Layout.Sider,
+        aLayoutHeader: Layout.Header,
+        aLayoutContent: Layout.Content,
+        aIcon: Icon,
+        aMenu: Menu,
+        aMenuItem: Menu.Item,
+        aMenuItemGroup: Menu.ItemGroup,
+        aSubMenu: Menu.SubMenu
     },
     data() {
         return {
-        }
-    }
-}
+            collapsed: false,
+        };
+    },
+};
 </script>
-<style lang="less" scoped>
-.layout-default {
-	padding: 80px 0 0;
-}
-.main{
-    position: relative;
-    margin: 0 auto;
-    max-width: 1300px;
-    min-width: 800px;
-    min-height: 90vh;
-    overflow: hidden;
-}
-.footer{
-    background-color: #191919;
-    padding: 20px 0;
-    text-align: center;
-    a{
-        color: rgba(255, 255, 255, 0.4)
-    }
+<style>
+#components-layout-demo-custom-trigger .trigger {
+    font-size: 18px;
+    line-height: 64px;
+    padding: 0 24px;
+    cursor: pointer;
+    transition: color 0.3s;
 }
 
+#components-layout-demo-custom-trigger .trigger:hover {
+    color: #1890ff;
+}
+
+#components-layout-demo-custom-trigger .logo {
+    height: 32px;
+    background: rgba(255, 255, 255, 0.2);
+    margin: 16px;
+}
 </style>

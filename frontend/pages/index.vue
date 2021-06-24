@@ -1,6 +1,5 @@
 <template>
     <div>
-        <upload-video />
     </div>
 </template>
 
